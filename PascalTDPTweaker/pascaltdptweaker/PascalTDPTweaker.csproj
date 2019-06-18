@@ -93,6 +93,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IndexCollector.cs" />
     <Compile Include="Parser.cs" />
     <Compile Include="BiosConfig.cs" />
     <Compile Include="MainForm.cs">

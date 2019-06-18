@@ -12,6 +12,7 @@ namespace PascalTDPTweaker
         // List to store read config file.
         private List<Model> models;
         private bool HasRead;
+        private readonly string GENERIC = "Generic";
 
         // Basic info address(location in BIOS).
         public byte[] StartAdr { get; set; }
@@ -55,11 +56,11 @@ namespace PascalTDPTweaker
         // Assign basic info address.
         public void AssignInfoAddress()
         {
-            this.StartAdr = Helper.HexToDecString(this.models.Find(item => item.Code == "Generic").Starter);
-            this.DateAdr = Helper.HexToDecString(this.models.Find(item => item.Code == "Generic").Date);
-            this.NameAdr = Helper.HexToDecString(this.models.Find(item => item.Code == "Generic").BIOSName);
-            this.VerAdr = Helper.HexToDecString(this.models.Find(item => item.Code == "Generic").Version);
-            this.BoardAdr = Helper.HexToDecString(this.models.Find(item => item.Code == "Generic").Board);
+            this.StartAdr = Helper.HexToDecString(this.models.Find(item => item.Code == GENERIC).Starter);
+            this.DateAdr = Helper.HexToDecString(this.models.Find(item => item.Code == GENERIC).Date);
+            this.NameAdr = Helper.HexToDecString(this.models.Find(item => item.Code == GENERIC).BIOSName);
+            this.VerAdr = Helper.HexToDecString(this.models.Find(item => item.Code == GENERIC).Version);
+            this.BoardAdr = Helper.HexToDecString(this.models.Find(item => item.Code == GENERIC).Board);
         }
 
         // Assign binary address(to be modded).
