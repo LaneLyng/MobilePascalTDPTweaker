@@ -67,7 +67,7 @@ namespace PascalTDPTweaker
                     ic.BlackSreenIndex = SetValueIndex(pr.StartAdr, bios, i, 0, 0, null, 0, ic.BlackSreenIndex, 1);
 
                     // vBIOS information section. //
-                    ic.DateIndex = SetTextIndex(pr.DateAdr, bios, i, 8, 0, textBox10, 1, ic.DateIndex, 0);
+                    ic.DateIndex = SetTextIndex(pr.DateAdr, bios, i, -22, 30, textBox10, 1, ic.DateIndex, 0);
                     ic.NameIndex = SetTextIndex(pr.NameAdr, bios, i, 23, 4, textBox8, 1, ic.NameIndex, 1);
                     ic.VersionIndex = SetTextIndex(pr.VerAdr, bios, i, 14, 0, textBox9, 1, ic.VersionIndex, 0);
                     ic.BoardIndex = SetTextIndex(pr.BoardAdr, bios, i, 6, 5, textBox7, 1, ic.BoardIndex, 0);

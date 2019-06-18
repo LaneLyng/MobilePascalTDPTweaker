@@ -62,7 +62,7 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>icon.png.ico</ApplicationIcon>
+    <ApplicationIcon>Resources\icon.png.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestCertificateThumbprint>C5C00E8C56178C88244DE9115F396463D249EB8B</ManifestCertificateThumbprint>
@@ -133,8 +133,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="icon.png.ico" />
-    <Content Include="icon_21_BmA_icon.ico" />
+    <Content Include="Resources\icon.png.ico" />
+    <Content Include="Resources\icon_21_BmA_icon.ico" />
     <None Include="Resources\logo_21.jpg" />
     <None Include="Resources\icon_21.jpg" />
     <Content Include="Resources\logo_1.jpg" />
