@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PascalTDPTweaker
+namespace PascalTDPTweaker.Models.Form
 {
     // Indices to store addresses to be modded.
     class IndexCollector

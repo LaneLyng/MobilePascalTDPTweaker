@@ -62,7 +62,7 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Resources\icon.png.ico</ApplicationIcon>
+    <ApplicationIcon>Resources\icon_desktop_small.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestCertificateThumbprint>C5C00E8C56178C88244DE9115F396463D249EB8B</ManifestCertificateThumbprint>
@@ -93,9 +93,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IndexCollector.cs" />
-    <Compile Include="Parser.cs" />
-    <Compile Include="BiosConfig.cs" />
+    <Compile Include="Models\Helper.cs" />
+    <Compile Include="Models\Form\IndexCollector.cs" />
+    <Compile Include="Models\Bios\Model.cs" />
+    <Compile Include="Models\Bios\Parser.cs" />
+    <Compile Include="Models\Bios\BiosConfig.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,7 +119,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Resources\Models.config" />
+    <EmbeddedResource Include="Models.config" />
     <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -133,12 +135,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Resources\icon.png.ico" />
-    <Content Include="Resources\icon_21_BmA_icon.ico" />
-    <None Include="Resources\logo_21.jpg" />
-    <None Include="Resources\icon_21.jpg" />
-    <Content Include="Resources\logo_1.jpg" />
-    <None Include="Resources\logo_11.jpg" />
+    <Content Include="Resources\icon_desktop_small.ico" />
+    <Content Include="Resources\icon_title_square.ico" />
+    <None Include="Resources\icon_title_wide.jpg" />
+    <Content Include="Resources\icon_desktop_hd.jpg" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">

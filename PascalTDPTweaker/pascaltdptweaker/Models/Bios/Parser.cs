@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Text;
 using System.Xml;
 using System.Xml.Serialization;
 
-namespace PascalTDPTweaker
+namespace PascalTDPTweaker.Models.Bios
 {
     class Parser
     {
@@ -111,63 +110,6 @@ namespace PascalTDPTweaker
         {
             name = name.Length > 18 ? name.Substring(0, 18) : "";
             return AssignDecAddress(name);
-        }
-    }
-
-    public static class Helper
-    {
-        public static byte[] HexToDecString(string hexString)
-        {
-            if (hexString == null || (hexString.Length & 1) == 1)
-            {
-                throw new ArgumentException();
-            }
-
-            byte[] sb = new byte[hexString.Length / 2];
-            int j = 0;
-
-            for (var i = 0; i < hexString.Length; i += 2)
-            {
-                var hexChar = byte.Parse(hexString.Substring(i, 2), System.Globalization.NumberStyles.HexNumber);
-                sb[j] = hexChar;
-                j++;
-            }
-            return sb;
-        }
-
-        public static string HexToString(string hexString)
-        {
-            if (hexString == null || (hexString.Length & 1) == 1)
-            {
-                throw new ArgumentException();
-            }
-
-            var sb = new StringBuilder();
-
-            for (var i = 0; i < hexString.Length; i += 2)
-            {
-                var hexChar = hexString.Substring(i, 2);
-                sb.Append((char)Convert.ToByte(hexChar, 16));
-            }
-            return sb.ToString();
-        }
-
-        public static string ReverseTDP(string s)
-        {
-            string tdp = s.Substring(6, 2) + s.Substring(4, 2) + s.Substring(2, 2) + s.Substring(0, 2);
-            return tdp;
-        }
-
-        public static string Spacing(string s)
-        {
-            string x = s.Substring(0, 2) + " " + s.Substring(2, 2) + " " + s.Substring(4, 2) + " " + s.Substring(6, 2);
-            return x;
-        }
-
-        public static string ReverseTemp(string s)
-        {
-            string temp = s.Substring(2, 2) + s.Substring(0, 2);
-            return temp;
         }
     }
 }

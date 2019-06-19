@@ -8,8 +8,8 @@ namespace PascalTDPTweaker
 {
     public partial class MainForm : Form
     {
-        Parser pr = new Parser();
-        IndexCollector ic;
+        Models.Bios.Parser pr = new Models.Bios.Parser();
+        Models.Form.IndexCollector ic;
         private int globalCounter;
         private bool textChanging = false;
         private int type;
@@ -40,12 +40,12 @@ namespace PascalTDPTweaker
             if (open.ShowDialog() == DialogResult.OK)
             {
                 // Load models config file.
-                pr.ReadConfigFile("PascalTDPTweaker.Resources.Models.config");
+                pr.ReadConfigFile("PascalTDPTweaker.Models.config");
                 // Try using common mobile cards settings by default.
                 pr.AssignDecAddress("Generic");
 
                 InitForm();
-                ic = new IndexCollector();
+                ic = new Models.Form.IndexCollector();
                 pr.AssignInfoAddress();
                 textBox6.Text = open.SafeFileName;
                 DateTime lastModified = File.GetLastWriteTime(open.FileName);
@@ -170,6 +170,7 @@ namespace PascalTDPTweaker
             if (index == -1)
             {
                 index = SetText(address, vbios, pos, dataLen, shift, tb, type);
+
                 if (index != -1)
                 {
                     globalCounter++;
@@ -429,7 +430,7 @@ namespace PascalTDPTweaker
                     hexValue = hexValue.Substring(hexValue.Length - 8);
                     //Console.WriteLine(hexValue);
                 }
-                byte[] data = Helper.HexToDecString(Helper.ReverseTDP(hexValue));
+                byte[] data = Models.Helper.HexToDecString(Models.Helper.ReverseTDP(hexValue));
                 int j = index;
                 for (int i = 0; i < data.Length; i++)
                 {
@@ -448,7 +449,7 @@ namespace PascalTDPTweaker
                     hexValue = hexValue.Substring(hexValue.Length - 4);
                     //Console.WriteLine(hexValue);
                 }
-                byte[] data = Helper.HexToDecString(Helper.ReverseTemp(hexValue));
+                byte[] data = Models.Helper.HexToDecString(Models.Helper.ReverseTemp(hexValue));
                 int j = index;
                 for (int i = 0; i < data.Length; i++)
                 {
@@ -463,7 +464,7 @@ namespace PascalTDPTweaker
         {
             if (adj == true && fix == false)
             {
-                byte[] data = Helper.HexToDecString(signal.Substring(0, 8));
+                byte[] data = Models.Helper.HexToDecString(signal.Substring(0, 8));
                 int j = index;
                 for (int i = 0; i < data.Length; i++)
                 {
@@ -473,7 +474,7 @@ namespace PascalTDPTweaker
             }
             else if (fix == true && adj == false)
             {
-                byte[] data = Helper.HexToDecString(signal.Substring(8, 8));
+                byte[] data = Models.Helper.HexToDecString(signal.Substring(8, 8));
                 int j = index;
                 for (int i = 0; i < data.Length; i++)
                 {
@@ -495,17 +496,21 @@ namespace PascalTDPTweaker
                     pos--;
                 else
                     return -1;
-                if (pos == (i-(posLen-1)))
+
+                // Indicating there is a match.
+                if (pos == (i - (posLen - 1)))
                 {
                     string result = "";
                     int index = pos - dataLen;
-                    for (int k = index; k < (pos+shift); k++)
+
+                    for (int k = index; k < (pos + shift); k++)
                     {
                         result += file[k].ToString("X2");
                     }
+
                     if (type == 1)
                     {
-                        String str = Helper.HexToString(result);
+                        String str = Models.Helper.HexToString(result);
                         tb.Text = str;
                         if (tb.Text == "")
                         {
@@ -514,6 +519,7 @@ namespace PascalTDPTweaker
                     }
                     else if (type == 2)
                         tb.Text = result;
+
                     return index;
                 }
             }
@@ -533,6 +539,7 @@ namespace PascalTDPTweaker
                 else
                     return -1;
 
+                // Indicating there is a match.
                 if (pos == (i - (posLen - 1)))
                 {
                     // Immediately return index to correct checksum.
@@ -546,20 +553,22 @@ namespace PascalTDPTweaker
                     {
                         result += file[k].ToString("X2");
                     }
+
                     // TDP = 1
                     if (type == 1)
                     {
-                        int num = int.Parse(Helper.ReverseTDP(result), System.Globalization.NumberStyles.HexNumber);
+                        int num = int.Parse(Models.Helper.ReverseTDP(result), System.Globalization.NumberStyles.HexNumber);
                         if (num <= nud.Maximum)
                             nud.Value = num;
                     }
                     // Temp = 2
                     else if (type == 2)
                     {
-                        int num = int.Parse(Helper.ReverseTemp(result), System.Globalization.NumberStyles.HexNumber) / 32;
+                        int num = int.Parse(Models.Helper.ReverseTemp(result), System.Globalization.NumberStyles.HexNumber) / 32;
                         if (num <= nud.Maximum)
                             nud.Value = num;
                     }
+
                     return index;
                 }
             }
@@ -578,18 +587,23 @@ namespace PascalTDPTweaker
                     pos--;
                 else
                     return -1;
+
+                // Indicating there is a match.
                 if (pos == (i - (posLen - 1)))
                 {
                     string result = "";
                     int index = pos - dataLen;
+
                     for (int k = index; k < (pos + shift); k++)
                     {
                         result += file[k].ToString("X2");
                     }
+
                     if (result.Equals(signal.Substring(0, 8)))
                         adj.Checked = true;
                     else if (result.Equals(signal.Substring(8, 8)))
                         fix.Checked = true;
+
                     return index;
                 }
             }
@@ -703,8 +717,8 @@ namespace PascalTDPTweaker
                     {
                         hexValue = "0" + hexValue;
                     }
-                    textBox13.Text = Helper.Spacing(hexValue);
-                    textBox14.Text = Helper.Spacing(Helper.ReverseTDP(hexValue));
+                    textBox13.Text = Models.Helper.Spacing(hexValue);
+                    textBox14.Text = Models.Helper.Spacing(Models.Helper.ReverseTDP(hexValue));
                 }
                 else
                 {
@@ -732,8 +746,8 @@ namespace PascalTDPTweaker
                         hexValue = "0" + hexValue;
                     }
                     textBox4.Text = hexValue;
-                    textBox13.Text = Helper.Spacing(hexValue);
-                    textBox14.Text = Helper.Spacing(Helper.ReverseTDP(hexValue));
+                    textBox13.Text = Models.Helper.Spacing(hexValue);
+                    textBox14.Text = Models.Helper.Spacing(Models.Helper.ReverseTDP(hexValue));
                 }
                 else
                 {
