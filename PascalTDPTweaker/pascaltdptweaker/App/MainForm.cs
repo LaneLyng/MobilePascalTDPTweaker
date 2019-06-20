@@ -8,8 +8,8 @@ namespace PascalTDPTweaker
 {
     public partial class MainForm : Form
     {
-        Models.Bios.Parser pr = new Models.Bios.Parser();
         Models.Form.IndexCollector ic;
+        readonly Models.Bios.Reader reader = new Models.Bios.Reader();
         private int globalCounter;
         private bool textChanging = false;
         private int type;
@@ -40,13 +40,10 @@ namespace PascalTDPTweaker
             if (open.ShowDialog() == DialogResult.OK)
             {
                 // Load models config file.
-                pr.ReadConfigFile("PascalTDPTweaker.Models.config");
-                // Try using common mobile cards settings by default.
-                pr.AssignDecAddress("Generic");
+                reader.ReadConfigFile("PascalTDPTweaker.Models.config", "Generic");
 
                 InitForm();
                 ic = new Models.Form.IndexCollector();
-                pr.AssignInfoAddress();
                 textBox6.Text = open.SafeFileName;
                 DateTime lastModified = File.GetLastWriteTime(open.FileName);
                 textBox3.Text = lastModified.ToString(FORMAT);
@@ -64,57 +61,53 @@ namespace PascalTDPTweaker
                     if (globalCounter == NUMADDR) break;
 
                     // Index to determine if black screen fix is needed.
-                    ic.BlackSreenIndex = SetValueIndex(pr.StartAdr, bios, i, 0, 0, null, 0, ic.BlackSreenIndex, 1);
+                    ic.BlackSreenIndex = SetValueIndex(reader.StartAdr.ID, bios, i, reader.StartAdr.Low, reader.StartAdr.High, null, 0, ic.BlackSreenIndex, 1);
 
                     // vBIOS information section. //
-                    ic.DateIndex = SetTextIndex(pr.DateAdr, bios, i, -22, 30, textBox10, 1, ic.DateIndex, 0);
-                    ic.NameIndex = SetTextIndex(pr.NameAdr, bios, i, 23, 4, textBox8, 1, ic.NameIndex, 1);
-                    ic.VersionIndex = SetTextIndex(pr.VerAdr, bios, i, 14, 0, textBox9, 1, ic.VersionIndex, 0);
-                    ic.BoardIndex = SetTextIndex(pr.BoardAdr, bios, i, 6, 5, textBox7, 1, ic.BoardIndex, 0);
+                    ic.DateIndex = SetTextIndex(reader.DateAdr.ID, bios, i, reader.DateAdr.Low, reader.DateAdr.High, textBox10, 1, ic.DateIndex, 0);
+                    ic.NameIndex = SetTextIndex(reader.NameAdr.ID, bios, i, reader.NameAdr.Low, reader.NameAdr.High, textBox8, 1, ic.NameIndex, 1);
+                    ic.VersionIndex = SetTextIndex(reader.VerAdr.ID, bios, i, reader.VerAdr.Low, reader.VerAdr.High, textBox9, 1, ic.VersionIndex, 0);
+                    ic.BoardIndex = SetTextIndex(reader.BoardAdr.ID, bios, i, reader.BoardAdr.Low, reader.BoardAdr.High, textBox7, 1, ic.BoardIndex, 0);
                     // End information section.
 
                     // To be modded. //
                     // TDP section. //
                     // Negative value to shift forward.
-                    ic.TdpSliderIndex = SetRadioIndex(pr.TDPSliderAdr, bios, i, -7, 11, tdpAdjustable, tdpFixed, pr.TDPSliderSignal, ic.TdpSliderIndex);
-
-                    if (type == 1) ic.BaseTdpIndex = SetValueIndex(pr.TDPAdr, bios, i, -10, 14, numericUpDown1, 1, ic.BaseTdpIndex, 0);
-                    else if (type == 2) ic.BaseTdpIndex = SetValueIndex(pr.TDPAdr, bios, i, -14, 18, numericUpDown1, 1, ic.BaseTdpIndex, 0);
-
-                    if (type == 1) ic.MaxTdpIndex = SetValueIndex(pr.TDPAdr, bios, i, -14, 18, numericUpDown2, 1, ic.MaxTdpIndex, 0);
-                    else if (type == 2) ic.MaxTdpIndex = SetValueIndex(pr.TDPAdr, bios, i, -18, 22, numericUpDown2, 1, ic.MaxTdpIndex, 0);
+                    ic.TdpSliderIndex = SetRadioIndex(reader.TDPSliderAdr.ID, bios, i, reader.TDPSliderAdr.Low, reader.TDPSliderAdr.High, tdpAdjustable, tdpFixed, reader.TDPSliderSignal.Code, ic.TdpSliderIndex);
+                    ic.BaseTdpIndex = SetValueIndex(reader.BaseTDPAdr.ID, bios, i, reader.BaseTDPAdr.Low, reader.BaseTDPAdr.High, numericUpDown1, 1, ic.BaseTdpIndex, 0);
+                    ic.MaxTdpIndex = SetValueIndex(reader.MaxTDPAdr.ID, bios, i, reader.MaxTDPAdr.Low, reader.MaxTDPAdr.High, numericUpDown2, 1, ic.MaxTdpIndex, 0);
                     // End TDP section.
 
                     // Extreme power section. //
                     // 48 3F 00 00. (Mobile 1080 = 16200)
-                    ic.P1BaseTdpIndex = SetValueIndex(pr.Power1Adr, bios, i, -10, 14, numericUpDown7, 1, ic.P1BaseTdpIndex, 0);
-                    ic.P1MaxTdpIndex = SetValueIndex(pr.Power1Adr, bios, i, -14, 18, numericUpDown8, 1, ic.P1MaxTdpIndex, 0);
+                    ic.P1BaseTdpIndex = SetValueIndex(reader.Power1BaseAdr.ID, bios, i, reader.Power1BaseAdr.Low, reader.Power1BaseAdr.High, numericUpDown7, 1, ic.P1BaseTdpIndex, 0);
+                    ic.P1MaxTdpIndex = SetValueIndex(reader.Power1MaxAdr.ID, bios, i, reader.Power1MaxAdr.Low, reader.Power1MaxAdr.High, numericUpDown8, 1, ic.P1MaxTdpIndex, 0);
 
                     // 50 B1 03 00. (Mobile 1080 = 242000)
-                    ic.P2BaseTdpIndex = SetValueIndex(pr.Power2Adr, bios, i, -10, 14, numericUpDown9, 1, ic.P2BaseTdpIndex, 0);
-                    ic.P2MaxTdpIndex = SetValueIndex(pr.Power2Adr, bios, i, -14, 18, numericUpDown10, 1, ic.P2MaxTdpIndex, 0);
+                    ic.P2BaseTdpIndex = SetValueIndex(reader.Power2BaseAdr.ID, bios, i, reader.Power2BaseAdr.Low, reader.Power2BaseAdr.High, numericUpDown9, 1, ic.P2BaseTdpIndex, 0);
+                    ic.P2MaxTdpIndex = SetValueIndex(reader.Power2MaxAdr.ID, bios, i, reader.Power2MaxAdr.Low, reader.Power2MaxAdr.High, numericUpDown10, 1, ic.P2MaxTdpIndex, 0);
 
                     // 80 19 02 00. (Mobile 1080 = 137600)
-                    ic.P3BaseTdpIndex = SetValueIndex(pr.Power3Adr, bios, i, -10, 14, numericUpDown11, 1, ic.P3BaseTdpIndex, 0);
-                    ic.P3MaxTdpIndex = SetValueIndex(pr.Power3Adr, bios, i, -14, 18, numericUpDown12, 1, ic.P3MaxTdpIndex, 0);
+                    ic.P3BaseTdpIndex = SetValueIndex(reader.Power3BaseAdr.ID, bios, i, reader.Power3BaseAdr.Low, reader.Power3BaseAdr.High, numericUpDown11, 1, ic.P3BaseTdpIndex, 0);
+                    ic.P3MaxTdpIndex = SetValueIndex(reader.Power3MaxAdr.ID, bios, i, reader.Power3MaxAdr.Low, reader.Power3MaxAdr.High, numericUpDown12, 1, ic.P3MaxTdpIndex, 0);
                     // End extreme power section.
 
                     // Temperature section. //   
                     // Positive value to shift backward, then negative to shift forward.
-                    ic.TempSliderIndex = SetRadioIndex(pr.Temp1Adr, bios, i, 10, -6, tempAdjustable, tempFixed, pr.TempSliderSignal, ic.TempSliderIndex); 
-                    ic.T1BaseTempIndex = SetValueIndex(pr.Temp1Adr, bios, i, 6, -4, numericUpDown3, 2, ic.T1BaseTempIndex, 0);
-                    ic.T1MaxTempIndex = SetValueIndex(pr.Temp1Adr, bios, i, 2, 0, numericUpDown4, 2, ic.T1MaxTempIndex, 0);
-                    ic.T1MinTempIndex = SetValueIndex(pr.Temp1Adr, bios, i, 4, -2, numericUpDown5, 2, ic.T1MinTempIndex, 0);
+                    ic.TempSliderIndex = SetRadioIndex(reader.TempSliderAdr.ID, bios, i, reader.TempSliderAdr.Low, reader.TempSliderAdr.High, tempAdjustable, tempFixed, reader.TempSliderSignal.Code, ic.TempSliderIndex); 
+                    ic.T1BaseTempIndex = SetValueIndex(reader.Temp1BaseAdr.ID, bios, i, reader.Temp1BaseAdr.Low, reader.Temp1BaseAdr.High, numericUpDown3, 2, ic.T1BaseTempIndex, 0);
+                    ic.T1MaxTempIndex = SetValueIndex(reader.Temp1MaxAdr.ID, bios, i, reader.Temp1MaxAdr.Low, reader.Temp1MaxAdr.High, numericUpDown4, 2, ic.T1MaxTempIndex, 0);
+                    ic.T1MinTempIndex = SetValueIndex(reader.Temp1MinAdr.ID, bios, i, reader.Temp1MinAdr.Low, reader.Temp1MinAdr.High, numericUpDown5, 2, ic.T1MinTempIndex, 0);
 
                     // Additional Temperature settings.
-                    ic.T2BaseTempIndex = SetValueIndex(pr.Temp2Adr, bios, i, 6, -4, numericUpDown13, 2, ic.T2BaseTempIndex, 0);
-                    ic.T2MaxTempIndex = SetValueIndex(pr.Temp2Adr, bios, i, 2, 0, numericUpDown14, 2, ic.T2MaxTempIndex, 0);
-                    ic.T2MinTempIndex = SetValueIndex(pr.Temp2Adr, bios, i, 4, -2, numericUpDown15, 2, ic.T2MinTempIndex, 0);
+                    ic.T2BaseTempIndex = SetValueIndex(reader.Temp2BaseAdr.ID, bios, i, reader.Temp2BaseAdr.Low, reader.Temp2BaseAdr.High, numericUpDown13, 2, ic.T2BaseTempIndex, 0);
+                    ic.T2MaxTempIndex = SetValueIndex(reader.Temp2MaxAdr.ID, bios, i, reader.Temp2MaxAdr.Low, reader.Temp2MaxAdr.High, numericUpDown14, 2, ic.T2MaxTempIndex, 0);
+                    ic.T2MinTempIndex = SetValueIndex(reader.Temp2MinAdr.ID, bios, i, reader.Temp2MinAdr.Low, reader.Temp2MinAdr.High, numericUpDown15, 2, ic.T2MinTempIndex, 0);
                     // End Temperature section.
 
                     // Checksum index.
-                    ic.CheckSum32Index = SetValueIndex(pr.Checksum32Adr, bios, i, 0, 0, null, 0, ic.CheckSum32Index, 0);
-                    ic.CheckSum8Index = SetTextIndex(pr.Checksum8Adr, bios, i, 5, -4, textBox15, 2, ic.CheckSum8Index, 2);
+                    ic.CheckSum32Index = SetValueIndex(reader.Checksum32Adr.ID, bios, i, reader.Checksum32Adr.Low, reader.Checksum32Adr.High, null, 0, ic.CheckSum32Index, 0);
+                    ic.CheckSum8Index = SetTextIndex(reader.Checksum8Adr.ID, bios, i, reader.Checksum8Adr.Low, reader.Checksum8Adr.High, textBox15, 2, ic.CheckSum8Index, 2);
 
                     // Set unknown if date index cannot be found.
                     if (ic.DateIndex == -1) textBox10.Text = "Unknown";
@@ -146,7 +139,7 @@ namespace PascalTDPTweaker
             {
                 string name = tb2.Text;
                 name = name.Contains("!") ? name.Substring(1) : name;
-                string model = pr.ReadModel(name);
+                string model = reader.ReadModel(name);
                 tb2.Text = name;
                 tb1.Text = model;
 
@@ -248,8 +241,8 @@ namespace PascalTDPTweaker
                     ModBIOSValue(bios, ic.T2MaxTempIndex, (int)numericUpDown14.Value, 2);
                     ModBIOSValue(bios, ic.T2MinTempIndex, (int)numericUpDown15.Value, 2);
                 }
-                if (ic.TdpSliderIndex != -1) ModBIOSSlide(bios, ic.TdpSliderIndex, tdpAdjustable.Checked, tdpFixed.Checked, pr.TDPSliderSignal);
-                if (ic.TempSliderIndex != -1) ModBIOSSlide(bios, ic.TempSliderIndex, tempAdjustable.Checked, tempFixed.Checked, pr.TempSliderSignal);
+                if (ic.TdpSliderIndex != -1) ModBIOSSlide(bios, ic.TdpSliderIndex, tdpAdjustable.Checked, tdpFixed.Checked, reader.TDPSliderSignal.Code);
+                if (ic.TempSliderIndex != -1) ModBIOSSlide(bios, ic.TempSliderIndex, tempAdjustable.Checked, tempFixed.Checked, reader.TempSliderSignal.Code);
                 if (ic.P1BaseTdpIndex != -1 && ic.P1MaxTdpIndex != -1)
                 {
                     ModBIOSValue(bios, ic.P1BaseTdpIndex, (int)numericUpDown7.Value, 1);
@@ -284,28 +277,27 @@ namespace PascalTDPTweaker
         private void Preset_Click(object sender, EventArgs e)
         {
             string model = textBox2.Text;
-            if (type == 1 && model.Contains("(Notebook)"))
+            try
             {
-                numericUpDown1.Value = pr.AssignPresetValues(model, 1);
-                numericUpDown2.Value = pr.AssignPresetValues(model, 2);
-                numericUpDown7.Value = pr.AssignPresetValues(model, 7);
-                numericUpDown8.Value = pr.AssignPresetValues(model, 8);
-                numericUpDown9.Value = pr.AssignPresetValues(model, 9);
-                numericUpDown10.Value = pr.AssignPresetValues(model, 10);
-                numericUpDown11.Value = pr.AssignPresetValues(model, 11);
-                numericUpDown12.Value = pr.AssignPresetValues(model, 12);
-                numericUpDown3.Value = numericUpDown4.Value = numericUpDown5.Value = pr.AssignPresetValues(model, 5);
-                numericUpDown13.Value = numericUpDown14.Value = numericUpDown15.Value = pr.AssignPresetValues(model, 5);
+                numericUpDown1.Value = reader.AssignPresetValues(model, 1);
+                numericUpDown2.Value = reader.AssignPresetValues(model, 2);
+                numericUpDown7.Value = reader.AssignPresetValues(model, 7);
+                numericUpDown8.Value = reader.AssignPresetValues(model, 8);
+                numericUpDown9.Value = reader.AssignPresetValues(model, 9);
+                numericUpDown10.Value = reader.AssignPresetValues(model, 10);
+                numericUpDown11.Value = reader.AssignPresetValues(model, 11);
+                numericUpDown12.Value = reader.AssignPresetValues(model, 12);
+                numericUpDown3.Value = numericUpDown4.Value = numericUpDown5.Value = reader.AssignPresetValues(model, 5);
+                numericUpDown13.Value = numericUpDown14.Value = numericUpDown15.Value = reader.AssignPresetValues(model, 5);
 
                 tdpAdjustable.Checked = true;
                 tdpFixed.Checked = false;
             }
-            else if (type == 2)
+            catch (Exception)
             {
-                MessageBox.Show("Preset is only for mobile cards.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
                 System.Media.SystemSounds.Beep.Play();
+                MessageBox.Show("Preset is not supported for this model.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }          
         }
 
         // Call CorrectCS to correct checksum. Standalone checksum correction.
@@ -510,12 +502,7 @@ namespace PascalTDPTweaker
 
                     if (type == 1)
                     {
-                        String str = Models.Helper.HexToString(result);
-                        tb.Text = str;
-                        if (tb.Text == "")
-                        {
-                            tb.Text = "....." + str.Substring(5);
-                        }
+                        tb.Text = Models.Helper.HexToString(result);
                     }
                     else if (type == 2)
                         tb.Text = result;

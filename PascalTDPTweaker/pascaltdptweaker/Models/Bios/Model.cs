@@ -18,23 +18,25 @@ namespace PascalTDPTweaker.Models.Bios
 
 
         // To be Modded.
-        public string TDP { get; set; }
+        public string BaseTDP { get; set; }
+        public string MaxTDP { get; set; }
         public string TDPSlider { get; set; }
         public string TDPSliderSignal { get; set; }
 
-        public string Power1 { get; set; }
-        public string Power2 { get; set; }
-        public string Power3 { get; set; }
+        public string Power1Base { get; set; }
+        public string Power1Max { get; set; }
+        public string Power2Base { get; set; }
+        public string Power2Max { get; set; }
+        public string Power3Base { get; set; }
+        public string Power3Max { get; set; }
 
-        /*
-        // To be added for desktop cards
-        public string Power4 { get; set; }
-        public string Power5 { get; set; }
-        public string Power6 { get; set; }
-        */
-
-        public string Temp1 { get; set; }
-        public string Temp2 { get; set; }
+        public string Temp1Min { get; set; }
+        public string Temp1Base { get; set; }
+        public string Temp1Max { get; set; }
+        public string Temp2Min { get; set; }
+        public string Temp2Base { get; set; }
+        public string Temp2Max { get; set; }
+        public string TempSlider { get; set; }
         public string TempSliderSignal { get; set; }
         public string Checksum8 { get; set; }
         public string Checksum32 { get; set; }
