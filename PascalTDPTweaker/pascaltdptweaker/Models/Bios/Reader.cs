@@ -20,10 +20,10 @@ namespace PascalTDPTweaker.Models.Bios
 
         // To be modded address.
         // Power.
-        public Address BaseTDPAdr { get; set; }
-        public Address MaxTDPAdr { get; set; }
-        public Address TDPSliderAdr { get; set; }
-        public Address TDPSliderSignal { get; set; }
+        public Address BaseTdpAdr { get; set; }
+        public Address MaxTdpAdr { get; set; }
+        public Address TdpSliderAdr { get; set; }
+        public Address TdpSliderSignal { get; set; }
         public Address Power1BaseAdr { get; set; }
         public Address Power1MaxAdr { get; set; }
         public Address Power2BaseAdr { get; set; }
@@ -45,16 +45,24 @@ namespace PascalTDPTweaker.Models.Bios
         public Address Checksum32Adr { get; set; }
         public Address Checksum8Adr { get; set; }
 
+        // Preset.
+        public Preset BaseTdpPreset { get; set; }
+        public Preset MaxTdpPreset { get; set; }
+        public Preset Power1Preset { get; set; }
+        public Preset Power2Preset { get; set; }
+        public Preset Power3Preset { get; set; }
+        public Preset TempPreset { get; set; }
+
         // Read "Models.config".
         public void ReadConfigFile(string embeddedPath, string generic)
         {
-            var serializer = new XmlSerializer(typeof(BiosConfig));
+            var serializer = new XmlSerializer(typeof(Config));
 
             using (Stream stream = this.GetType().Assembly.GetManifestResourceStream(embeddedPath))
             {
-                using (var reader = XmlReader.Create(stream))
+                using (var xmlReader = XmlReader.Create(stream))
                 {
-                    BiosConfig config = (BiosConfig)serializer.Deserialize(reader);
+                    Config config = (Config)serializer.Deserialize(xmlReader);
                     this.models = config.Models;
                     this.AssignInfoAddress(generic);
                     this.AssignDecAddress(generic);
@@ -69,7 +77,7 @@ namespace PascalTDPTweaker.Models.Bios
 
             this.StartAdr = new Address(model.Starter);
             this.DateAdr = new Address(model.Date);
-            this.NameAdr = new Address(model.BIOSName);
+            this.NameAdr = new Address(model.BiosName);
             this.VerAdr = new Address(model.Version);
             this.BoardAdr= new Address(model.Board);
         }
@@ -84,12 +92,12 @@ namespace PascalTDPTweaker.Models.Bios
                 // Re-read the board since model could have been changed.
                 this.BoardAdr = new Address(model.Board);
 
-                this.BaseTDPAdr = new Address(model.BaseTDP);
-                this.MaxTDPAdr = new Address(model.MaxTDP);
-                this.TDPSliderAdr = new Address(model.TDPSlider);
-                this.TDPSliderSignal = new Address
+                this.BaseTdpAdr = new Address(model.BaseTdp);
+                this.MaxTdpAdr = new Address(model.MaxTdp);
+                this.TdpSliderAdr = new Address(model.TdpSlider);
+                this.TdpSliderSignal = new Address
                 {
-                    Code = model.TDPSliderSignal
+                    Config = model.TdpSliderSignal
                 };
                 this.Power1BaseAdr = new Address(model.Power1Base);
                 this.Power1MaxAdr = new Address(model.Power1Max);
@@ -108,12 +116,13 @@ namespace PascalTDPTweaker.Models.Bios
                 this.TempSliderAdr = new Address(model.TempSlider);
                 this.TempSliderSignal = new Address
                 {
-                    Code = model.TempSliderSignal
+                    Config = model.TempSliderSignal
                 };
 
                 this.Checksum32Adr = new Address(model.Checksum32);
                 this.Checksum8Adr = new Address(model.Checksum8);
 
+                AssignPresetValues(model);
                 return model.ModelName;
             }
             catch (Exception)
@@ -123,24 +132,18 @@ namespace PascalTDPTweaker.Models.Bios
         }
 
         // Assign binary address(to be modded).
-        public int AssignPresetValues(string modelName, int numericNum)
+        public int AssignPresetValues(Model model)
         {
-            Model model = this.models.Find(item => item.ModelName == modelName);
             try
             {
-                if (numericNum == 1)
-                    return Int32.Parse(model.PresetTDP1);
-                else if (numericNum == 2)
-                    return Int32.Parse(model.PresetTDP2);
-                else if (numericNum == 7 || numericNum == 8)
-                    return Int32.Parse(model.PresetPower1);
-                else if (numericNum == 9 || numericNum == 10)
-                    return Int32.Parse(model.PresetPower2);
-                else if (numericNum == 11 || numericNum == 12)
-                    return Int32.Parse(model.PresetPower3);
-                else if (numericNum == 5)
-                    return Int32.Parse(model.PresetTempT);
-                else return 0;
+                this.BaseTdpPreset = new Preset(Int32.Parse(model.PresetTdpBase));
+                this.MaxTdpPreset = new Preset(Int32.Parse(model.PresetTdpMax));
+                this.Power1Preset = new Preset(Int32.Parse(model.PresetPower1));
+                this.Power2Preset = new Preset(Int32.Parse(model.PresetPower2));
+                this.Power3Preset = new Preset(Int32.Parse(model.PresetPower3));
+                this.TempPreset = new Preset(Int32.Parse(model.PresetTemp));
+
+                return 1;
             }
             catch (Exception)
             {

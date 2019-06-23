@@ -31,67 +31,67 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.openBIOS = new System.Windows.Forms.Button();
             this.saveBIOS = new System.Windows.Forms.Button();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBoxFileName = new System.Windows.Forms.TextBox();
             this.fileName = new System.Windows.Forms.Label();
             this.board = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textBoxBoard = new System.Windows.Forms.TextBox();
             this.name = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.textBoxBiosName = new System.Windows.Forms.TextBox();
             this.version = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.textBoxVersion = new System.Windows.Forms.TextBox();
             this.date = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.textBoxDate = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.textBox12 = new System.Windows.Forms.TextBox();
             this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBoxModifiedDate = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBoxModel = new System.Windows.Forms.TextBox();
             this.model = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxChecksum32 = new System.Windows.Forms.TextBox();
             this.checkSum = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.panel20 = new System.Windows.Forms.Panel();
-            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.textBoxLittleEndian = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.textBoxBigEndian = new System.Windows.Forms.TextBox();
             this.panel22 = new System.Windows.Forms.Panel();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBoxDecValue = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.panel21 = new System.Windows.Forms.Panel();
+            this.panelHexValue = new System.Windows.Forms.Panel();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.textBoxChecksum8 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.quickFix = new System.Windows.Forms.Button();
             this.panel13 = new System.Windows.Forms.Panel();
-            this.numericUpDown6 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownTargetChecksum32 = new System.Windows.Forms.NumericUpDown();
             this.targetCS = new System.Windows.Forms.Label();
             this.fixCS = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.label4 = new System.Windows.Forms.Label();
             this.panel15 = new System.Windows.Forms.Panel();
             this.panel18 = new System.Windows.Forms.Panel();
-            this.numericUpDown12 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownP3Max = new System.Windows.Forms.NumericUpDown();
             this.panel16 = new System.Windows.Forms.Panel();
-            this.numericUpDown10 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownP2Max = new System.Windows.Forms.NumericUpDown();
             this.panel19 = new System.Windows.Forms.Panel();
-            this.numericUpDown11 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownP3Base = new System.Windows.Forms.NumericUpDown();
             this.panel14 = new System.Windows.Forms.Panel();
-            this.numericUpDown8 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownP1Max = new System.Windows.Forms.NumericUpDown();
             this.label8 = new System.Windows.Forms.Label();
             this.panel17 = new System.Windows.Forms.Panel();
-            this.numericUpDown9 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownP2Base = new System.Windows.Forms.NumericUpDown();
             this.label7 = new System.Windows.Forms.Label();
             this.panel12 = new System.Windows.Forms.Panel();
-            this.numericUpDown7 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownP1Base = new System.Windows.Forms.NumericUpDown();
             this.label6 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -105,22 +105,22 @@
             this.tempAdjustable = new System.Windows.Forms.RadioButton();
             this.tempSlide = new System.Windows.Forms.Label();
             this.panel27 = new System.Windows.Forms.Panel();
-            this.numericUpDown14 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownTemp2Max = new System.Windows.Forms.NumericUpDown();
             this.label18 = new System.Windows.Forms.Label();
             this.panel26 = new System.Windows.Forms.Panel();
-            this.numericUpDown13 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownTemp2Base = new System.Windows.Forms.NumericUpDown();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.panel25 = new System.Windows.Forms.Panel();
-            this.numericUpDown15 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownTemp2Min = new System.Windows.Forms.NumericUpDown();
             this.panel24 = new System.Windows.Forms.Panel();
-            this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownTemp1Max = new System.Windows.Forms.NumericUpDown();
             this.minVal = new System.Windows.Forms.Label();
             this.defVal = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.numericUpDown5 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownTemp1Min = new System.Windows.Forms.NumericUpDown();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownTemp1Base = new System.Windows.Forms.NumericUpDown();
             this.maxVal = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
             this.tdpFixed = new System.Windows.Forms.RadioButton();
@@ -129,9 +129,9 @@
             this.baseTDP = new System.Windows.Forms.Label();
             this.maxTDP = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownTdpMax = new System.Windows.Forms.NumericUpDown();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownTdpBase = new System.Windows.Forms.NumericUpDown();
             this.Adjustment = new System.Windows.Forms.TabControl();
             this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
@@ -140,51 +140,51 @@
             this.tabPage5.SuspendLayout();
             this.panel20.SuspendLayout();
             this.panel22.SuspendLayout();
-            this.panel21.SuspendLayout();
+            this.panelHexValue.SuspendLayout();
             this.panel11.SuspendLayout();
             this.panel13.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTargetChecksum32)).BeginInit();
             this.tabPage3.SuspendLayout();
             this.panel15.SuspendLayout();
             this.panel18.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownP3Max)).BeginInit();
             this.panel16.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownP2Max)).BeginInit();
             this.panel19.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownP3Base)).BeginInit();
             this.panel14.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownP1Max)).BeginInit();
             this.panel17.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownP2Base)).BeginInit();
             this.panel12.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownP1Base)).BeginInit();
             this.tabPage1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel27.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown14)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTemp2Max)).BeginInit();
             this.panel26.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTemp2Base)).BeginInit();
             this.panel25.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown15)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTemp2Min)).BeginInit();
             this.panel24.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTemp1Max)).BeginInit();
             this.panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTemp1Min)).BeginInit();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTemp1Base)).BeginInit();
             this.panel10.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTdpMax)).BeginInit();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTdpBase)).BeginInit();
             this.Adjustment.SuspendLayout();
             this.SuspendLayout();
             // 
             // openBIOS
             // 
             this.openBIOS.Location = new System.Drawing.Point(120, 795);
-            this.openBIOS.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.openBIOS.Margin = new System.Windows.Forms.Padding(2);
             this.openBIOS.Name = "openBIOS";
             this.openBIOS.Size = new System.Drawing.Size(110, 32);
             this.openBIOS.TabIndex = 0;
@@ -195,7 +195,7 @@
             // saveBIOS
             // 
             this.saveBIOS.Location = new System.Drawing.Point(459, 795);
-            this.saveBIOS.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.saveBIOS.Margin = new System.Windows.Forms.Padding(2);
             this.saveBIOS.Name = "saveBIOS";
             this.saveBIOS.Size = new System.Drawing.Size(110, 32);
             this.saveBIOS.TabIndex = 2;
@@ -203,17 +203,17 @@
             this.saveBIOS.UseVisualStyleBackColor = true;
             this.saveBIOS.Click += new System.EventHandler(this.SaveBIOS_Click);
             // 
-            // textBox6
+            // textBoxFileName
             // 
-            this.textBox6.BackColor = System.Drawing.SystemColors.Info;
-            this.textBox6.Font = new System.Drawing.Font("Courier New", 7.875F, System.Drawing.FontStyle.Bold);
-            this.textBox6.Location = new System.Drawing.Point(148, 45);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.ReadOnly = true;
-            this.textBox6.Size = new System.Drawing.Size(259, 25);
-            this.textBox6.TabIndex = 14;
-            this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxFileName.BackColor = System.Drawing.SystemColors.Info;
+            this.textBoxFileName.Font = new System.Drawing.Font("Courier New", 7.875F, System.Drawing.FontStyle.Bold);
+            this.textBoxFileName.Location = new System.Drawing.Point(148, 45);
+            this.textBoxFileName.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxFileName.Name = "textBoxFileName";
+            this.textBoxFileName.ReadOnly = true;
+            this.textBoxFileName.Size = new System.Drawing.Size(259, 25);
+            this.textBoxFileName.TabIndex = 14;
+            this.textBoxFileName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // fileName
             // 
@@ -237,16 +237,16 @@
             this.board.TabIndex = 17;
             this.board.Text = "Board";
             // 
-            // textBox7
+            // textBoxBoard
             // 
-            this.textBox7.BackColor = System.Drawing.SystemColors.Info;
-            this.textBox7.Location = new System.Drawing.Point(148, 146);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.ReadOnly = true;
-            this.textBox7.Size = new System.Drawing.Size(260, 25);
-            this.textBox7.TabIndex = 18;
-            this.textBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxBoard.BackColor = System.Drawing.SystemColors.Info;
+            this.textBoxBoard.Location = new System.Drawing.Point(148, 146);
+            this.textBoxBoard.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxBoard.Name = "textBoxBoard";
+            this.textBoxBoard.ReadOnly = true;
+            this.textBoxBoard.Size = new System.Drawing.Size(260, 25);
+            this.textBoxBoard.TabIndex = 18;
+            this.textBoxBoard.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // name
             // 
@@ -259,17 +259,17 @@
             this.name.TabIndex = 19;
             this.name.Text = "BIOS Name";
             // 
-            // textBox8
+            // textBoxBiosName
             // 
-            this.textBox8.BackColor = System.Drawing.SystemColors.Info;
-            this.textBox8.Font = new System.Drawing.Font("Courier New", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.Location = new System.Drawing.Point(148, 14);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.ReadOnly = true;
-            this.textBox8.Size = new System.Drawing.Size(392, 25);
-            this.textBox8.TabIndex = 20;
-            this.textBox8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxBiosName.BackColor = System.Drawing.SystemColors.Info;
+            this.textBoxBiosName.Font = new System.Drawing.Font("Courier New", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxBiosName.Location = new System.Drawing.Point(148, 14);
+            this.textBoxBiosName.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxBiosName.Name = "textBoxBiosName";
+            this.textBoxBiosName.ReadOnly = true;
+            this.textBoxBiosName.Size = new System.Drawing.Size(392, 25);
+            this.textBoxBiosName.TabIndex = 20;
+            this.textBoxBiosName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // version
             // 
@@ -282,16 +282,16 @@
             this.version.TabIndex = 21;
             this.version.Text = "Version";
             // 
-            // textBox9
+            // textBoxVersion
             // 
-            this.textBox9.BackColor = System.Drawing.SystemColors.Info;
-            this.textBox9.Location = new System.Drawing.Point(148, 112);
-            this.textBox9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.ReadOnly = true;
-            this.textBox9.Size = new System.Drawing.Size(259, 25);
-            this.textBox9.TabIndex = 22;
-            this.textBox9.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxVersion.BackColor = System.Drawing.SystemColors.Info;
+            this.textBoxVersion.Location = new System.Drawing.Point(148, 112);
+            this.textBoxVersion.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxVersion.Name = "textBoxVersion";
+            this.textBoxVersion.ReadOnly = true;
+            this.textBoxVersion.Size = new System.Drawing.Size(259, 25);
+            this.textBoxVersion.TabIndex = 22;
+            this.textBoxVersion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // date
             // 
@@ -304,16 +304,16 @@
             this.date.TabIndex = 23;
             this.date.Text = "Date";
             // 
-            // textBox10
+            // textBoxDate
             // 
-            this.textBox10.BackColor = System.Drawing.SystemColors.Info;
-            this.textBox10.Location = new System.Drawing.Point(148, 212);
-            this.textBox10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.ReadOnly = true;
-            this.textBox10.Size = new System.Drawing.Size(260, 25);
-            this.textBox10.TabIndex = 24;
-            this.textBox10.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxDate.BackColor = System.Drawing.SystemColors.Info;
+            this.textBoxDate.Location = new System.Drawing.Point(148, 212);
+            this.textBoxDate.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxDate.Name = "textBoxDate";
+            this.textBoxDate.ReadOnly = true;
+            this.textBoxDate.Size = new System.Drawing.Size(260, 25);
+            this.textBoxDate.TabIndex = 24;
+            this.textBoxDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // panel1
             // 
@@ -321,25 +321,25 @@
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.textBox12);
             this.panel1.Controls.Add(this.textBox11);
-            this.panel1.Controls.Add(this.textBox3);
+            this.panel1.Controls.Add(this.textBoxModifiedDate);
             this.panel1.Controls.Add(this.label10);
-            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.textBoxModel);
             this.panel1.Controls.Add(this.model);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.textBoxChecksum32);
             this.panel1.Controls.Add(this.checkSum);
-            this.panel1.Controls.Add(this.textBox10);
-            this.panel1.Controls.Add(this.textBox8);
-            this.panel1.Controls.Add(this.textBox9);
+            this.panel1.Controls.Add(this.textBoxDate);
+            this.panel1.Controls.Add(this.textBoxBiosName);
+            this.panel1.Controls.Add(this.textBoxVersion);
             this.panel1.Controls.Add(this.date);
-            this.panel1.Controls.Add(this.textBox7);
+            this.panel1.Controls.Add(this.textBoxBoard);
             this.panel1.Controls.Add(this.panel8);
-            this.panel1.Controls.Add(this.textBox6);
+            this.panel1.Controls.Add(this.textBoxFileName);
             this.panel1.Controls.Add(this.name);
             this.panel1.Controls.Add(this.version);
             this.panel1.Controls.Add(this.fileName);
             this.panel1.Controls.Add(this.board);
             this.panel1.Location = new System.Drawing.Point(56, 32);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(580, 306);
             this.panel1.TabIndex = 27;
@@ -364,17 +364,17 @@
             this.textBox11.TabIndex = 31;
             this.textBox11.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox3
+            // textBoxModifiedDate
             // 
-            this.textBox3.BackColor = System.Drawing.SystemColors.Info;
-            this.textBox3.Font = new System.Drawing.Font("Courier New", 7.875F, System.Drawing.FontStyle.Bold);
-            this.textBox3.Location = new System.Drawing.Point(150, 78);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(258, 25);
-            this.textBox3.TabIndex = 30;
-            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxModifiedDate.BackColor = System.Drawing.SystemColors.Info;
+            this.textBoxModifiedDate.Font = new System.Drawing.Font("Courier New", 7.875F, System.Drawing.FontStyle.Bold);
+            this.textBoxModifiedDate.Location = new System.Drawing.Point(150, 78);
+            this.textBoxModifiedDate.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxModifiedDate.Name = "textBoxModifiedDate";
+            this.textBoxModifiedDate.ReadOnly = true;
+            this.textBoxModifiedDate.Size = new System.Drawing.Size(258, 25);
+            this.textBoxModifiedDate.TabIndex = 30;
+            this.textBoxModifiedDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label10
             // 
@@ -387,16 +387,16 @@
             this.label10.TabIndex = 29;
             this.label10.Text = "Modified";
             // 
-            // textBox2
+            // textBoxModel
             // 
-            this.textBox2.BackColor = System.Drawing.SystemColors.Info;
-            this.textBox2.Location = new System.Drawing.Point(148, 178);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(260, 25);
-            this.textBox2.TabIndex = 28;
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxModel.BackColor = System.Drawing.SystemColors.Info;
+            this.textBoxModel.Location = new System.Drawing.Point(148, 178);
+            this.textBoxModel.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxModel.Name = "textBoxModel";
+            this.textBoxModel.ReadOnly = true;
+            this.textBoxModel.Size = new System.Drawing.Size(260, 25);
+            this.textBoxModel.TabIndex = 28;
+            this.textBoxModel.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // model
             // 
@@ -409,16 +409,16 @@
             this.model.TabIndex = 27;
             this.model.Text = "Model";
             // 
-            // textBox1
+            // textBoxChecksum32
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.Info;
-            this.textBox1.Location = new System.Drawing.Point(148, 246);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(260, 25);
-            this.textBox1.TabIndex = 26;
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxChecksum32.BackColor = System.Drawing.SystemColors.Info;
+            this.textBoxChecksum32.Location = new System.Drawing.Point(148, 246);
+            this.textBoxChecksum32.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxChecksum32.Name = "textBoxChecksum32";
+            this.textBoxChecksum32.ReadOnly = true;
+            this.textBoxChecksum32.Size = new System.Drawing.Size(260, 25);
+            this.textBoxChecksum32.TabIndex = 26;
+            this.textBoxChecksum32.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // checkSum
             // 
@@ -436,7 +436,7 @@
             this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel8.Controls.Add(this.pictureBox1);
             this.panel8.Location = new System.Drawing.Point(416, 46);
-            this.panel8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel8.Margin = new System.Windows.Forms.Padding(2);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(121, 151);
             this.panel8.TabIndex = 21;
@@ -446,7 +446,7 @@
             this.pictureBox1.BackColor = System.Drawing.SystemColors.Control;
             this.pictureBox1.Image = global::PascalTDPTweaker.Properties.Resources.logo;
             this.pictureBox1.Location = new System.Drawing.Point(-2, -2);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.MaximumSize = new System.Drawing.Size(120, 150);
             this.pictureBox1.MinimumSize = new System.Drawing.Size(120, 150);
             this.pictureBox1.Name = "pictureBox1";
@@ -464,7 +464,7 @@
             this.tabPage5.Controls.Add(this.fixCS);
             this.tabPage5.Location = new System.Drawing.Point(4, 27);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage5.Size = new System.Drawing.Size(571, 387);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Tools";
@@ -472,29 +472,29 @@
             // panel20
             // 
             this.panel20.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel20.Controls.Add(this.textBox14);
+            this.panel20.Controls.Add(this.textBoxLittleEndian);
             this.panel20.Controls.Add(this.label15);
             this.panel20.Controls.Add(this.label14);
-            this.panel20.Controls.Add(this.textBox13);
+            this.panel20.Controls.Add(this.textBoxBigEndian);
             this.panel20.Controls.Add(this.panel22);
             this.panel20.Controls.Add(this.label13);
-            this.panel20.Controls.Add(this.panel21);
+            this.panel20.Controls.Add(this.panelHexValue);
             this.panel20.Controls.Add(this.label12);
             this.panel20.Location = new System.Drawing.Point(-3, 226);
-            this.panel20.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel20.Margin = new System.Windows.Forms.Padding(2);
             this.panel20.Name = "panel20";
             this.panel20.Size = new System.Drawing.Size(578, 160);
             this.panel20.TabIndex = 37;
             // 
-            // textBox14
+            // textBoxLittleEndian
             // 
-            this.textBox14.BackColor = System.Drawing.Color.Ivory;
-            this.textBox14.Enabled = false;
-            this.textBox14.Location = new System.Drawing.Point(285, 104);
-            this.textBox14.MaxLength = 9;
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(265, 25);
-            this.textBox14.TabIndex = 41;
+            this.textBoxLittleEndian.BackColor = System.Drawing.Color.Ivory;
+            this.textBoxLittleEndian.Enabled = false;
+            this.textBoxLittleEndian.Location = new System.Drawing.Point(285, 104);
+            this.textBoxLittleEndian.MaxLength = 9;
+            this.textBoxLittleEndian.Name = "textBoxLittleEndian";
+            this.textBoxLittleEndian.Size = new System.Drawing.Size(265, 25);
+            this.textBoxLittleEndian.TabIndex = 41;
             // 
             // label15
             // 
@@ -516,36 +516,36 @@
             this.label14.TabIndex = 39;
             this.label14.Text = "Big-endian: ";
             // 
-            // textBox13
+            // textBoxBigEndian
             // 
-            this.textBox13.BackColor = System.Drawing.Color.Ivory;
-            this.textBox13.Enabled = false;
-            this.textBox13.Location = new System.Drawing.Point(9, 104);
-            this.textBox13.MaxLength = 9;
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(265, 25);
-            this.textBox13.TabIndex = 38;
+            this.textBoxBigEndian.BackColor = System.Drawing.Color.Ivory;
+            this.textBoxBigEndian.Enabled = false;
+            this.textBoxBigEndian.Location = new System.Drawing.Point(9, 104);
+            this.textBoxBigEndian.MaxLength = 9;
+            this.textBoxBigEndian.Name = "textBoxBigEndian";
+            this.textBoxBigEndian.Size = new System.Drawing.Size(265, 25);
+            this.textBoxBigEndian.TabIndex = 38;
             // 
             // panel22
             // 
             this.panel22.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel22.Controls.Add(this.textBox5);
+            this.panel22.Controls.Add(this.textBoxDecValue);
             this.panel22.Location = new System.Drawing.Point(285, 45);
-            this.panel22.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel22.Margin = new System.Windows.Forms.Padding(2);
             this.panel22.Name = "panel22";
             this.panel22.Size = new System.Drawing.Size(265, 25);
             this.panel22.TabIndex = 32;
             // 
-            // textBox5
+            // textBoxDecValue
             // 
-            this.textBox5.BackColor = System.Drawing.Color.Ivory;
-            this.textBox5.Location = new System.Drawing.Point(-2, -2);
-            this.textBox5.MaxLength = 9;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(265, 25);
-            this.textBox5.TabIndex = 37;
-            this.textBox5.TextChanged += new System.EventHandler(this.TextBox5_TextChanged);
-            this.textBox5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBox5_KeyPress);
+            this.textBoxDecValue.BackColor = System.Drawing.Color.Ivory;
+            this.textBoxDecValue.Location = new System.Drawing.Point(-2, -2);
+            this.textBoxDecValue.MaxLength = 9;
+            this.textBoxDecValue.Name = "textBoxDecValue";
+            this.textBoxDecValue.Size = new System.Drawing.Size(265, 25);
+            this.textBoxDecValue.TabIndex = 37;
+            this.textBoxDecValue.TextChanged += new System.EventHandler(this.TextBox5_TextChanged);
+            this.textBoxDecValue.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBox5_KeyPress);
             // 
             // label13
             // 
@@ -557,15 +557,15 @@
             this.label13.TabIndex = 32;
             this.label13.Text = "Decimal Value:";
             // 
-            // panel21
+            // panelHexValue
             // 
-            this.panel21.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel21.Controls.Add(this.textBox4);
-            this.panel21.Location = new System.Drawing.Point(9, 45);
-            this.panel21.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.panel21.Name = "panel21";
-            this.panel21.Size = new System.Drawing.Size(265, 25);
-            this.panel21.TabIndex = 31;
+            this.panelHexValue.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panelHexValue.Controls.Add(this.textBox4);
+            this.panelHexValue.Location = new System.Drawing.Point(9, 45);
+            this.panelHexValue.Margin = new System.Windows.Forms.Padding(2);
+            this.panelHexValue.Name = "panelHexValue";
+            this.panelHexValue.Size = new System.Drawing.Size(265, 25);
+            this.panelHexValue.TabIndex = 31;
             // 
             // textBox4
             // 
@@ -603,14 +603,14 @@
             // 
             this.panel11.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel11.Controls.Add(this.label9);
-            this.panel11.Controls.Add(this.textBox15);
+            this.panel11.Controls.Add(this.textBoxChecksum8);
             this.panel11.Controls.Add(this.button1);
             this.panel11.Controls.Add(this.label3);
             this.panel11.Controls.Add(this.quickFix);
             this.panel11.Controls.Add(this.panel13);
             this.panel11.Controls.Add(this.targetCS);
             this.panel11.Location = new System.Drawing.Point(-3, 51);
-            this.panel11.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel11.Margin = new System.Windows.Forms.Padding(2);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(578, 126);
             this.panel11.TabIndex = 36;
@@ -627,22 +627,22 @@
             this.label9.TabIndex = 36;
             this.label9.Text = "* EXPERIMENTAL";
             // 
-            // textBox15
+            // textBoxChecksum8
             // 
-            this.textBox15.BackColor = System.Drawing.Color.Ivory;
-            this.textBox15.Location = new System.Drawing.Point(280, 75);
-            this.textBox15.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.ReadOnly = true;
-            this.textBox15.Size = new System.Drawing.Size(102, 25);
-            this.textBox15.TabIndex = 33;
-            this.textBox15.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxChecksum8.BackColor = System.Drawing.Color.Ivory;
+            this.textBoxChecksum8.Location = new System.Drawing.Point(280, 75);
+            this.textBoxChecksum8.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxChecksum8.Name = "textBoxChecksum8";
+            this.textBoxChecksum8.ReadOnly = true;
+            this.textBoxChecksum8.Size = new System.Drawing.Size(102, 25);
+            this.textBoxChecksum8.TabIndex = 33;
+            this.textBoxChecksum8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // button1
             // 
             this.button1.Enabled = false;
             this.button1.Location = new System.Drawing.Point(394, 70);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(152, 32);
             this.button1.TabIndex = 34;
@@ -664,7 +664,7 @@
             // quickFix
             // 
             this.quickFix.Location = new System.Drawing.Point(398, 16);
-            this.quickFix.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.quickFix.Margin = new System.Windows.Forms.Padding(2);
             this.quickFix.Name = "quickFix";
             this.quickFix.Size = new System.Drawing.Size(152, 32);
             this.quickFix.TabIndex = 35;
@@ -675,28 +675,28 @@
             // panel13
             // 
             this.panel13.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel13.Controls.Add(this.numericUpDown6);
+            this.panel13.Controls.Add(this.numericUpDownTargetChecksum32);
             this.panel13.Location = new System.Drawing.Point(282, 21);
-            this.panel13.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel13.Margin = new System.Windows.Forms.Padding(2);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(102, 25);
             this.panel13.TabIndex = 31;
             // 
-            // numericUpDown6
+            // numericUpDownTargetChecksum32
             // 
-            this.numericUpDown6.BackColor = System.Drawing.Color.Ivory;
-            this.numericUpDown6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.numericUpDown6.Font = new System.Drawing.Font("Times New Roman", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown6.Location = new System.Drawing.Point(-2, -2);
-            this.numericUpDown6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.numericUpDown6.Maximum = new decimal(new int[] {
+            this.numericUpDownTargetChecksum32.BackColor = System.Drawing.Color.Ivory;
+            this.numericUpDownTargetChecksum32.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.numericUpDownTargetChecksum32.Font = new System.Drawing.Font("Times New Roman", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDownTargetChecksum32.Location = new System.Drawing.Point(-2, -2);
+            this.numericUpDownTargetChecksum32.Margin = new System.Windows.Forms.Padding(2);
+            this.numericUpDownTargetChecksum32.Maximum = new decimal(new int[] {
             1410065407,
             2,
             0,
             0});
-            this.numericUpDown6.Name = "numericUpDown6";
-            this.numericUpDown6.Size = new System.Drawing.Size(100, 26);
-            this.numericUpDown6.TabIndex = 30;
+            this.numericUpDownTargetChecksum32.Name = "numericUpDownTargetChecksum32";
+            this.numericUpDownTargetChecksum32.Size = new System.Drawing.Size(100, 26);
+            this.numericUpDownTargetChecksum32.TabIndex = 30;
             // 
             // targetCS
             // 
@@ -724,9 +724,9 @@
             this.tabPage3.Controls.Add(this.label4);
             this.tabPage3.Controls.Add(this.panel15);
             this.tabPage3.Location = new System.Drawing.Point(4, 27);
-            this.tabPage3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage3.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage3.Size = new System.Drawing.Size(571, 387);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Advanced";
@@ -758,7 +758,7 @@
             this.panel15.Controls.Add(this.label5);
             this.panel15.Controls.Add(this.magicNum);
             this.panel15.Location = new System.Drawing.Point(-3, 50);
-            this.panel15.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel15.Margin = new System.Windows.Forms.Padding(2);
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(578, 344);
             this.panel15.TabIndex = 37;
@@ -766,122 +766,122 @@
             // panel18
             // 
             this.panel18.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel18.Controls.Add(this.numericUpDown12);
+            this.panel18.Controls.Add(this.numericUpDownP3Max);
             this.panel18.Location = new System.Drawing.Point(273, 266);
-            this.panel18.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel18.Margin = new System.Windows.Forms.Padding(2);
             this.panel18.Name = "panel18";
             this.panel18.Size = new System.Drawing.Size(92, 24);
             this.panel18.TabIndex = 43;
             // 
-            // numericUpDown12
+            // numericUpDownP3Max
             // 
-            this.numericUpDown12.BackColor = System.Drawing.Color.Ivory;
-            this.numericUpDown12.Font = new System.Drawing.Font("Times New Roman", 7.875F, System.Drawing.FontStyle.Bold);
-            this.numericUpDown12.Increment = new decimal(new int[] {
+            this.numericUpDownP3Max.BackColor = System.Drawing.Color.Ivory;
+            this.numericUpDownP3Max.Font = new System.Drawing.Font("Times New Roman", 7.875F, System.Drawing.FontStyle.Bold);
+            this.numericUpDownP3Max.Increment = new decimal(new int[] {
             100,
             0,
             0,
             0});
-            this.numericUpDown12.Location = new System.Drawing.Point(-2, -2);
-            this.numericUpDown12.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.numericUpDown12.Maximum = new decimal(new int[] {
+            this.numericUpDownP3Max.Location = new System.Drawing.Point(-2, -2);
+            this.numericUpDownP3Max.Margin = new System.Windows.Forms.Padding(2);
+            this.numericUpDownP3Max.Maximum = new decimal(new int[] {
             330000,
             0,
             0,
             0});
-            this.numericUpDown12.Name = "numericUpDown12";
-            this.numericUpDown12.Size = new System.Drawing.Size(92, 26);
-            this.numericUpDown12.TabIndex = 31;
+            this.numericUpDownP3Max.Name = "numericUpDownP3Max";
+            this.numericUpDownP3Max.Size = new System.Drawing.Size(92, 26);
+            this.numericUpDownP3Max.TabIndex = 31;
             // 
             // panel16
             // 
             this.panel16.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel16.Controls.Add(this.numericUpDown10);
+            this.panel16.Controls.Add(this.numericUpDownP2Max);
             this.panel16.Location = new System.Drawing.Point(273, 170);
-            this.panel16.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel16.Margin = new System.Windows.Forms.Padding(2);
             this.panel16.Name = "panel16";
             this.panel16.Size = new System.Drawing.Size(92, 24);
             this.panel16.TabIndex = 39;
             // 
-            // numericUpDown10
+            // numericUpDownP2Max
             // 
-            this.numericUpDown10.BackColor = System.Drawing.Color.Ivory;
-            this.numericUpDown10.Font = new System.Drawing.Font("Times New Roman", 7.875F, System.Drawing.FontStyle.Bold);
-            this.numericUpDown10.Increment = new decimal(new int[] {
+            this.numericUpDownP2Max.BackColor = System.Drawing.Color.Ivory;
+            this.numericUpDownP2Max.Font = new System.Drawing.Font("Times New Roman", 7.875F, System.Drawing.FontStyle.Bold);
+            this.numericUpDownP2Max.Increment = new decimal(new int[] {
             1000,
             0,
             0,
             0});
-            this.numericUpDown10.Location = new System.Drawing.Point(-2, -2);
-            this.numericUpDown10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.numericUpDown10.Maximum = new decimal(new int[] {
+            this.numericUpDownP2Max.Location = new System.Drawing.Point(-2, -2);
+            this.numericUpDownP2Max.Margin = new System.Windows.Forms.Padding(2);
+            this.numericUpDownP2Max.Maximum = new decimal(new int[] {
             330000,
             0,
             0,
             0});
-            this.numericUpDown10.Name = "numericUpDown10";
-            this.numericUpDown10.Size = new System.Drawing.Size(92, 26);
-            this.numericUpDown10.TabIndex = 31;
+            this.numericUpDownP2Max.Name = "numericUpDownP2Max";
+            this.numericUpDownP2Max.Size = new System.Drawing.Size(92, 26);
+            this.numericUpDownP2Max.TabIndex = 31;
             // 
             // panel19
             // 
             this.panel19.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel19.Controls.Add(this.numericUpDown11);
+            this.panel19.Controls.Add(this.numericUpDownP3Base);
             this.panel19.Location = new System.Drawing.Point(273, 230);
-            this.panel19.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel19.Margin = new System.Windows.Forms.Padding(2);
             this.panel19.Name = "panel19";
             this.panel19.Size = new System.Drawing.Size(92, 24);
             this.panel19.TabIndex = 41;
             // 
-            // numericUpDown11
+            // numericUpDownP3Base
             // 
-            this.numericUpDown11.BackColor = System.Drawing.Color.Ivory;
-            this.numericUpDown11.Font = new System.Drawing.Font("Times New Roman", 7.875F, System.Drawing.FontStyle.Bold);
-            this.numericUpDown11.Increment = new decimal(new int[] {
+            this.numericUpDownP3Base.BackColor = System.Drawing.Color.Ivory;
+            this.numericUpDownP3Base.Font = new System.Drawing.Font("Times New Roman", 7.875F, System.Drawing.FontStyle.Bold);
+            this.numericUpDownP3Base.Increment = new decimal(new int[] {
             100,
             0,
             0,
             0});
-            this.numericUpDown11.Location = new System.Drawing.Point(-2, -2);
-            this.numericUpDown11.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.numericUpDown11.Maximum = new decimal(new int[] {
+            this.numericUpDownP3Base.Location = new System.Drawing.Point(-2, -2);
+            this.numericUpDownP3Base.Margin = new System.Windows.Forms.Padding(2);
+            this.numericUpDownP3Base.Maximum = new decimal(new int[] {
             330000,
             0,
             0,
             0});
-            this.numericUpDown11.Name = "numericUpDown11";
-            this.numericUpDown11.Size = new System.Drawing.Size(92, 26);
-            this.numericUpDown11.TabIndex = 31;
+            this.numericUpDownP3Base.Name = "numericUpDownP3Base";
+            this.numericUpDownP3Base.Size = new System.Drawing.Size(92, 26);
+            this.numericUpDownP3Base.TabIndex = 31;
             // 
             // panel14
             // 
             this.panel14.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel14.Controls.Add(this.numericUpDown8);
+            this.panel14.Controls.Add(this.numericUpDownP1Max);
             this.panel14.Location = new System.Drawing.Point(273, 68);
-            this.panel14.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel14.Margin = new System.Windows.Forms.Padding(2);
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(92, 24);
             this.panel14.TabIndex = 35;
             // 
-            // numericUpDown8
+            // numericUpDownP1Max
             // 
-            this.numericUpDown8.BackColor = System.Drawing.Color.Ivory;
-            this.numericUpDown8.Font = new System.Drawing.Font("Times New Roman", 7.875F, System.Drawing.FontStyle.Bold);
-            this.numericUpDown8.Increment = new decimal(new int[] {
+            this.numericUpDownP1Max.BackColor = System.Drawing.Color.Ivory;
+            this.numericUpDownP1Max.Font = new System.Drawing.Font("Times New Roman", 7.875F, System.Drawing.FontStyle.Bold);
+            this.numericUpDownP1Max.Increment = new decimal(new int[] {
             100,
             0,
             0,
             0});
-            this.numericUpDown8.Location = new System.Drawing.Point(-2, -2);
-            this.numericUpDown8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.numericUpDown8.Maximum = new decimal(new int[] {
+            this.numericUpDownP1Max.Location = new System.Drawing.Point(-2, -2);
+            this.numericUpDownP1Max.Margin = new System.Windows.Forms.Padding(2);
+            this.numericUpDownP1Max.Maximum = new decimal(new int[] {
             330000,
             0,
             0,
             0});
-            this.numericUpDown8.Name = "numericUpDown8";
-            this.numericUpDown8.Size = new System.Drawing.Size(92, 26);
-            this.numericUpDown8.TabIndex = 31;
+            this.numericUpDownP1Max.Name = "numericUpDownP1Max";
+            this.numericUpDownP1Max.Size = new System.Drawing.Size(92, 26);
+            this.numericUpDownP1Max.TabIndex = 31;
             // 
             // label8
             // 
@@ -896,32 +896,32 @@
             // panel17
             // 
             this.panel17.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel17.Controls.Add(this.numericUpDown9);
+            this.panel17.Controls.Add(this.numericUpDownP2Base);
             this.panel17.Location = new System.Drawing.Point(273, 132);
-            this.panel17.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel17.Margin = new System.Windows.Forms.Padding(2);
             this.panel17.Name = "panel17";
             this.panel17.Size = new System.Drawing.Size(92, 24);
             this.panel17.TabIndex = 37;
             // 
-            // numericUpDown9
+            // numericUpDownP2Base
             // 
-            this.numericUpDown9.BackColor = System.Drawing.Color.Ivory;
-            this.numericUpDown9.Font = new System.Drawing.Font("Times New Roman", 7.875F, System.Drawing.FontStyle.Bold);
-            this.numericUpDown9.Increment = new decimal(new int[] {
+            this.numericUpDownP2Base.BackColor = System.Drawing.Color.Ivory;
+            this.numericUpDownP2Base.Font = new System.Drawing.Font("Times New Roman", 7.875F, System.Drawing.FontStyle.Bold);
+            this.numericUpDownP2Base.Increment = new decimal(new int[] {
             1000,
             0,
             0,
             0});
-            this.numericUpDown9.Location = new System.Drawing.Point(-2, -2);
-            this.numericUpDown9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.numericUpDown9.Maximum = new decimal(new int[] {
+            this.numericUpDownP2Base.Location = new System.Drawing.Point(-2, -2);
+            this.numericUpDownP2Base.Margin = new System.Windows.Forms.Padding(2);
+            this.numericUpDownP2Base.Maximum = new decimal(new int[] {
             330000,
             0,
             0,
             0});
-            this.numericUpDown9.Name = "numericUpDown9";
-            this.numericUpDown9.Size = new System.Drawing.Size(92, 26);
-            this.numericUpDown9.TabIndex = 31;
+            this.numericUpDownP2Base.Name = "numericUpDownP2Base";
+            this.numericUpDownP2Base.Size = new System.Drawing.Size(92, 26);
+            this.numericUpDownP2Base.TabIndex = 31;
             // 
             // label7
             // 
@@ -936,32 +936,32 @@
             // panel12
             // 
             this.panel12.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel12.Controls.Add(this.numericUpDown7);
+            this.panel12.Controls.Add(this.numericUpDownP1Base);
             this.panel12.Location = new System.Drawing.Point(273, 30);
-            this.panel12.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel12.Margin = new System.Windows.Forms.Padding(2);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(92, 24);
             this.panel12.TabIndex = 33;
             // 
-            // numericUpDown7
+            // numericUpDownP1Base
             // 
-            this.numericUpDown7.BackColor = System.Drawing.Color.Ivory;
-            this.numericUpDown7.Font = new System.Drawing.Font("Times New Roman", 7.875F, System.Drawing.FontStyle.Bold);
-            this.numericUpDown7.Increment = new decimal(new int[] {
+            this.numericUpDownP1Base.BackColor = System.Drawing.Color.Ivory;
+            this.numericUpDownP1Base.Font = new System.Drawing.Font("Times New Roman", 7.875F, System.Drawing.FontStyle.Bold);
+            this.numericUpDownP1Base.Increment = new decimal(new int[] {
             100,
             0,
             0,
             0});
-            this.numericUpDown7.Location = new System.Drawing.Point(-2, -2);
-            this.numericUpDown7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.numericUpDown7.Maximum = new decimal(new int[] {
+            this.numericUpDownP1Base.Location = new System.Drawing.Point(-2, -2);
+            this.numericUpDownP1Base.Margin = new System.Windows.Forms.Padding(2);
+            this.numericUpDownP1Base.Maximum = new decimal(new int[] {
             330000,
             0,
             0,
             0});
-            this.numericUpDown7.Name = "numericUpDown7";
-            this.numericUpDown7.Size = new System.Drawing.Size(92, 26);
-            this.numericUpDown7.TabIndex = 31;
+            this.numericUpDownP1Base.Name = "numericUpDownP1Base";
+            this.numericUpDownP1Base.Size = new System.Drawing.Size(92, 26);
+            this.numericUpDownP1Base.TabIndex = 31;
             // 
             // label6
             // 
@@ -1009,9 +1009,9 @@
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.panel2);
             this.tabPage1.Location = new System.Drawing.Point(4, 27);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage1.Size = new System.Drawing.Size(571, 387);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Basic";
@@ -1032,7 +1032,7 @@
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.panel9);
             this.panel2.Location = new System.Drawing.Point(-6, 50);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(574, 342);
             this.panel2.TabIndex = 33;
@@ -1057,7 +1057,7 @@
             this.panel9.Controls.Add(this.maxVal);
             this.panel9.Controls.Add(this.panel10);
             this.panel9.Location = new System.Drawing.Point(2, -2);
-            this.panel9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel9.Margin = new System.Windows.Forms.Padding(2);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(574, 345);
             this.panel9.TabIndex = 29;
@@ -1076,7 +1076,7 @@
             // 
             this.tempFixed.AutoSize = true;
             this.tempFixed.Location = new System.Drawing.Point(166, 298);
-            this.tempFixed.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tempFixed.Margin = new System.Windows.Forms.Padding(2);
             this.tempFixed.Name = "tempFixed";
             this.tempFixed.Size = new System.Drawing.Size(83, 22);
             this.tempFixed.TabIndex = 60;
@@ -1087,7 +1087,7 @@
             // 
             this.tempAdjustable.AutoSize = true;
             this.tempAdjustable.Location = new System.Drawing.Point(280, 298);
-            this.tempAdjustable.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tempAdjustable.Margin = new System.Windows.Forms.Padding(2);
             this.tempAdjustable.Name = "tempAdjustable";
             this.tempAdjustable.Size = new System.Drawing.Size(133, 22);
             this.tempAdjustable.TabIndex = 59;
@@ -1107,27 +1107,27 @@
             // panel27
             // 
             this.panel27.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel27.Controls.Add(this.numericUpDown14);
+            this.panel27.Controls.Add(this.numericUpDownTemp2Max);
             this.panel27.Location = new System.Drawing.Point(426, 260);
-            this.panel27.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel27.Margin = new System.Windows.Forms.Padding(2);
             this.panel27.Name = "panel27";
             this.panel27.Size = new System.Drawing.Size(92, 24);
             this.panel27.TabIndex = 56;
             // 
-            // numericUpDown14
+            // numericUpDownTemp2Max
             // 
-            this.numericUpDown14.BackColor = System.Drawing.Color.Ivory;
-            this.numericUpDown14.Font = new System.Drawing.Font("Times New Roman", 7.875F, System.Drawing.FontStyle.Bold);
-            this.numericUpDown14.Location = new System.Drawing.Point(-2, -2);
-            this.numericUpDown14.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.numericUpDown14.Maximum = new decimal(new int[] {
+            this.numericUpDownTemp2Max.BackColor = System.Drawing.Color.Ivory;
+            this.numericUpDownTemp2Max.Font = new System.Drawing.Font("Times New Roman", 7.875F, System.Drawing.FontStyle.Bold);
+            this.numericUpDownTemp2Max.Location = new System.Drawing.Point(-2, -2);
+            this.numericUpDownTemp2Max.Margin = new System.Windows.Forms.Padding(2);
+            this.numericUpDownTemp2Max.Maximum = new decimal(new int[] {
             105,
             0,
             0,
             0});
-            this.numericUpDown14.Name = "numericUpDown14";
-            this.numericUpDown14.Size = new System.Drawing.Size(92, 26);
-            this.numericUpDown14.TabIndex = 32;
+            this.numericUpDownTemp2Max.Name = "numericUpDownTemp2Max";
+            this.numericUpDownTemp2Max.Size = new System.Drawing.Size(92, 26);
+            this.numericUpDownTemp2Max.TabIndex = 32;
             // 
             // label18
             // 
@@ -1142,27 +1142,27 @@
             // panel26
             // 
             this.panel26.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel26.Controls.Add(this.numericUpDown13);
+            this.panel26.Controls.Add(this.numericUpDownTemp2Base);
             this.panel26.Location = new System.Drawing.Point(426, 214);
-            this.panel26.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel26.Margin = new System.Windows.Forms.Padding(2);
             this.panel26.Name = "panel26";
             this.panel26.Size = new System.Drawing.Size(92, 24);
             this.panel26.TabIndex = 54;
             // 
-            // numericUpDown13
+            // numericUpDownTemp2Base
             // 
-            this.numericUpDown13.BackColor = System.Drawing.Color.Ivory;
-            this.numericUpDown13.Font = new System.Drawing.Font("Times New Roman", 7.875F, System.Drawing.FontStyle.Bold);
-            this.numericUpDown13.Location = new System.Drawing.Point(-2, -2);
-            this.numericUpDown13.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.numericUpDown13.Maximum = new decimal(new int[] {
+            this.numericUpDownTemp2Base.BackColor = System.Drawing.Color.Ivory;
+            this.numericUpDownTemp2Base.Font = new System.Drawing.Font("Times New Roman", 7.875F, System.Drawing.FontStyle.Bold);
+            this.numericUpDownTemp2Base.Location = new System.Drawing.Point(-2, -2);
+            this.numericUpDownTemp2Base.Margin = new System.Windows.Forms.Padding(2);
+            this.numericUpDownTemp2Base.Maximum = new decimal(new int[] {
             105,
             0,
             0,
             0});
-            this.numericUpDown13.Name = "numericUpDown13";
-            this.numericUpDown13.Size = new System.Drawing.Size(92, 26);
-            this.numericUpDown13.TabIndex = 33;
+            this.numericUpDownTemp2Base.Name = "numericUpDownTemp2Base";
+            this.numericUpDownTemp2Base.Size = new System.Drawing.Size(92, 26);
+            this.numericUpDownTemp2Base.TabIndex = 33;
             // 
             // label17
             // 
@@ -1187,52 +1187,52 @@
             // panel25
             // 
             this.panel25.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel25.Controls.Add(this.numericUpDown15);
+            this.panel25.Controls.Add(this.numericUpDownTemp2Min);
             this.panel25.Location = new System.Drawing.Point(426, 172);
-            this.panel25.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel25.Margin = new System.Windows.Forms.Padding(2);
             this.panel25.Name = "panel25";
             this.panel25.Size = new System.Drawing.Size(92, 24);
             this.panel25.TabIndex = 53;
             // 
-            // numericUpDown15
+            // numericUpDownTemp2Min
             // 
-            this.numericUpDown15.BackColor = System.Drawing.Color.Ivory;
-            this.numericUpDown15.Font = new System.Drawing.Font("Times New Roman", 7.875F, System.Drawing.FontStyle.Bold);
-            this.numericUpDown15.Location = new System.Drawing.Point(-2, -2);
-            this.numericUpDown15.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.numericUpDown15.Maximum = new decimal(new int[] {
+            this.numericUpDownTemp2Min.BackColor = System.Drawing.Color.Ivory;
+            this.numericUpDownTemp2Min.Font = new System.Drawing.Font("Times New Roman", 7.875F, System.Drawing.FontStyle.Bold);
+            this.numericUpDownTemp2Min.Location = new System.Drawing.Point(-2, -2);
+            this.numericUpDownTemp2Min.Margin = new System.Windows.Forms.Padding(2);
+            this.numericUpDownTemp2Min.Maximum = new decimal(new int[] {
             105,
             0,
             0,
             0});
-            this.numericUpDown15.Name = "numericUpDown15";
-            this.numericUpDown15.Size = new System.Drawing.Size(92, 26);
-            this.numericUpDown15.TabIndex = 34;
+            this.numericUpDownTemp2Min.Name = "numericUpDownTemp2Min";
+            this.numericUpDownTemp2Min.Size = new System.Drawing.Size(92, 26);
+            this.numericUpDownTemp2Min.TabIndex = 34;
             // 
             // panel24
             // 
             this.panel24.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel24.Controls.Add(this.numericUpDown4);
+            this.panel24.Controls.Add(this.numericUpDownTemp1Max);
             this.panel24.Location = new System.Drawing.Point(166, 260);
-            this.panel24.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel24.Margin = new System.Windows.Forms.Padding(2);
             this.panel24.Name = "panel24";
             this.panel24.Size = new System.Drawing.Size(92, 24);
             this.panel24.TabIndex = 50;
             // 
-            // numericUpDown4
+            // numericUpDownTemp1Max
             // 
-            this.numericUpDown4.BackColor = System.Drawing.Color.Ivory;
-            this.numericUpDown4.Font = new System.Drawing.Font("Times New Roman", 7.875F, System.Drawing.FontStyle.Bold);
-            this.numericUpDown4.Location = new System.Drawing.Point(-2, -2);
-            this.numericUpDown4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.numericUpDown4.Maximum = new decimal(new int[] {
+            this.numericUpDownTemp1Max.BackColor = System.Drawing.Color.Ivory;
+            this.numericUpDownTemp1Max.Font = new System.Drawing.Font("Times New Roman", 7.875F, System.Drawing.FontStyle.Bold);
+            this.numericUpDownTemp1Max.Location = new System.Drawing.Point(-2, -2);
+            this.numericUpDownTemp1Max.Margin = new System.Windows.Forms.Padding(2);
+            this.numericUpDownTemp1Max.Maximum = new decimal(new int[] {
             105,
             0,
             0,
             0});
-            this.numericUpDown4.Name = "numericUpDown4";
-            this.numericUpDown4.Size = new System.Drawing.Size(92, 26);
-            this.numericUpDown4.TabIndex = 32;
+            this.numericUpDownTemp1Max.Name = "numericUpDownTemp1Max";
+            this.numericUpDownTemp1Max.Size = new System.Drawing.Size(92, 26);
+            this.numericUpDownTemp1Max.TabIndex = 32;
             // 
             // minVal
             // 
@@ -1257,52 +1257,52 @@
             // panel7
             // 
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel7.Controls.Add(this.numericUpDown5);
+            this.panel7.Controls.Add(this.numericUpDownTemp1Min);
             this.panel7.Location = new System.Drawing.Point(166, 172);
-            this.panel7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel7.Margin = new System.Windows.Forms.Padding(2);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(92, 24);
             this.panel7.TabIndex = 51;
             // 
-            // numericUpDown5
+            // numericUpDownTemp1Min
             // 
-            this.numericUpDown5.BackColor = System.Drawing.Color.Ivory;
-            this.numericUpDown5.Font = new System.Drawing.Font("Times New Roman", 7.875F, System.Drawing.FontStyle.Bold);
-            this.numericUpDown5.Location = new System.Drawing.Point(-2, -2);
-            this.numericUpDown5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.numericUpDown5.Maximum = new decimal(new int[] {
+            this.numericUpDownTemp1Min.BackColor = System.Drawing.Color.Ivory;
+            this.numericUpDownTemp1Min.Font = new System.Drawing.Font("Times New Roman", 7.875F, System.Drawing.FontStyle.Bold);
+            this.numericUpDownTemp1Min.Location = new System.Drawing.Point(-2, -2);
+            this.numericUpDownTemp1Min.Margin = new System.Windows.Forms.Padding(2);
+            this.numericUpDownTemp1Min.Maximum = new decimal(new int[] {
             105,
             0,
             0,
             0});
-            this.numericUpDown5.Name = "numericUpDown5";
-            this.numericUpDown5.Size = new System.Drawing.Size(92, 26);
-            this.numericUpDown5.TabIndex = 33;
+            this.numericUpDownTemp1Min.Name = "numericUpDownTemp1Min";
+            this.numericUpDownTemp1Min.Size = new System.Drawing.Size(92, 26);
+            this.numericUpDownTemp1Min.TabIndex = 33;
             // 
             // panel5
             // 
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel5.Controls.Add(this.numericUpDown3);
+            this.panel5.Controls.Add(this.numericUpDownTemp1Base);
             this.panel5.Location = new System.Drawing.Point(166, 214);
-            this.panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(92, 24);
             this.panel5.TabIndex = 49;
             // 
-            // numericUpDown3
+            // numericUpDownTemp1Base
             // 
-            this.numericUpDown3.BackColor = System.Drawing.Color.Ivory;
-            this.numericUpDown3.Font = new System.Drawing.Font("Times New Roman", 7.875F, System.Drawing.FontStyle.Bold);
-            this.numericUpDown3.Location = new System.Drawing.Point(-2, -2);
-            this.numericUpDown3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.numericUpDown3.Maximum = new decimal(new int[] {
+            this.numericUpDownTemp1Base.BackColor = System.Drawing.Color.Ivory;
+            this.numericUpDownTemp1Base.Font = new System.Drawing.Font("Times New Roman", 7.875F, System.Drawing.FontStyle.Bold);
+            this.numericUpDownTemp1Base.Location = new System.Drawing.Point(-2, -2);
+            this.numericUpDownTemp1Base.Margin = new System.Windows.Forms.Padding(2);
+            this.numericUpDownTemp1Base.Maximum = new decimal(new int[] {
             105,
             0,
             0,
             0});
-            this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(92, 26);
-            this.numericUpDown3.TabIndex = 31;
+            this.numericUpDownTemp1Base.Name = "numericUpDownTemp1Base";
+            this.numericUpDownTemp1Base.Size = new System.Drawing.Size(92, 26);
+            this.numericUpDownTemp1Base.TabIndex = 31;
             // 
             // maxVal
             // 
@@ -1326,7 +1326,7 @@
             this.panel10.Controls.Add(this.panel4);
             this.panel10.Controls.Add(this.panel3);
             this.panel10.Location = new System.Drawing.Point(0, 0);
-            this.panel10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel10.Margin = new System.Windows.Forms.Padding(2);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(571, 127);
             this.panel10.TabIndex = 32;
@@ -1335,7 +1335,7 @@
             // 
             this.tdpFixed.AutoSize = true;
             this.tdpFixed.Location = new System.Drawing.Point(420, 75);
-            this.tdpFixed.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tdpFixed.Margin = new System.Windows.Forms.Padding(2);
             this.tdpFixed.Name = "tdpFixed";
             this.tdpFixed.Size = new System.Drawing.Size(83, 22);
             this.tdpFixed.TabIndex = 2;
@@ -1346,7 +1346,7 @@
             // 
             this.tdpAdjustable.AutoSize = true;
             this.tdpAdjustable.Location = new System.Drawing.Point(420, 28);
-            this.tdpAdjustable.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tdpAdjustable.Margin = new System.Windows.Forms.Padding(2);
             this.tdpAdjustable.Name = "tdpAdjustable";
             this.tdpAdjustable.Size = new System.Drawing.Size(133, 22);
             this.tdpAdjustable.TabIndex = 1;
@@ -1386,62 +1386,62 @@
             // panel4
             // 
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel4.Controls.Add(this.numericUpDown2);
+            this.panel4.Controls.Add(this.numericUpDownTdpMax);
             this.panel4.Location = new System.Drawing.Point(164, 76);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(92, 24);
             this.panel4.TabIndex = 1;
             // 
-            // numericUpDown2
+            // numericUpDownTdpMax
             // 
-            this.numericUpDown2.BackColor = System.Drawing.Color.Ivory;
-            this.numericUpDown2.Font = new System.Drawing.Font("Times New Roman", 7.875F, System.Drawing.FontStyle.Bold);
-            this.numericUpDown2.Increment = new decimal(new int[] {
+            this.numericUpDownTdpMax.BackColor = System.Drawing.Color.Ivory;
+            this.numericUpDownTdpMax.Font = new System.Drawing.Font("Times New Roman", 7.875F, System.Drawing.FontStyle.Bold);
+            this.numericUpDownTdpMax.Increment = new decimal(new int[] {
             1000,
             0,
             0,
             0});
-            this.numericUpDown2.Location = new System.Drawing.Point(-2, -3);
-            this.numericUpDown2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.numericUpDown2.Maximum = new decimal(new int[] {
+            this.numericUpDownTdpMax.Location = new System.Drawing.Point(-2, -3);
+            this.numericUpDownTdpMax.Margin = new System.Windows.Forms.Padding(2);
+            this.numericUpDownTdpMax.Maximum = new decimal(new int[] {
             400000,
             0,
             0,
             0});
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(92, 26);
-            this.numericUpDown2.TabIndex = 30;
+            this.numericUpDownTdpMax.Name = "numericUpDownTdpMax";
+            this.numericUpDownTdpMax.Size = new System.Drawing.Size(92, 26);
+            this.numericUpDownTdpMax.TabIndex = 30;
             // 
             // panel3
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel3.Controls.Add(this.numericUpDown1);
+            this.panel3.Controls.Add(this.numericUpDownTdpBase);
             this.panel3.Location = new System.Drawing.Point(164, 28);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(92, 24);
             this.panel3.TabIndex = 0;
             // 
-            // numericUpDown1
+            // numericUpDownTdpBase
             // 
-            this.numericUpDown1.BackColor = System.Drawing.Color.Ivory;
-            this.numericUpDown1.Font = new System.Drawing.Font("Times New Roman", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown1.Increment = new decimal(new int[] {
+            this.numericUpDownTdpBase.BackColor = System.Drawing.Color.Ivory;
+            this.numericUpDownTdpBase.Font = new System.Drawing.Font("Times New Roman", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDownTdpBase.Increment = new decimal(new int[] {
             1000,
             0,
             0,
             0});
-            this.numericUpDown1.Location = new System.Drawing.Point(-2, -2);
-            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
+            this.numericUpDownTdpBase.Location = new System.Drawing.Point(-2, -2);
+            this.numericUpDownTdpBase.Margin = new System.Windows.Forms.Padding(2);
+            this.numericUpDownTdpBase.Maximum = new decimal(new int[] {
             400000,
             0,
             0,
             0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(92, 26);
-            this.numericUpDown1.TabIndex = 29;
+            this.numericUpDownTdpBase.Name = "numericUpDownTdpBase";
+            this.numericUpDownTdpBase.Size = new System.Drawing.Size(92, 26);
+            this.numericUpDownTdpBase.TabIndex = 29;
             // 
             // Adjustment
             // 
@@ -1449,7 +1449,7 @@
             this.Adjustment.Controls.Add(this.tabPage3);
             this.Adjustment.Controls.Add(this.tabPage5);
             this.Adjustment.Location = new System.Drawing.Point(56, 354);
-            this.Adjustment.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Adjustment.Margin = new System.Windows.Forms.Padding(2);
             this.Adjustment.Name = "Adjustment";
             this.Adjustment.SelectedIndex = 0;
             this.Adjustment.Size = new System.Drawing.Size(579, 418);
@@ -1458,7 +1458,7 @@
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(291, 795);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(110, 32);
             this.button2.TabIndex = 34;
@@ -1480,11 +1480,11 @@
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Courier New", 7.875F, System.Drawing.FontStyle.Bold);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximumSize = new System.Drawing.Size(700, 899);
             this.MinimumSize = new System.Drawing.Size(700, 899);
             this.Name = "MainForm";
-            this.Padding = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.Padding = new System.Windows.Forms.Padding(8);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Mobile Pascal TDP Tweaker v1.20";
             this.panel1.ResumeLayout(false);
@@ -1497,51 +1497,51 @@
             this.panel20.PerformLayout();
             this.panel22.ResumeLayout(false);
             this.panel22.PerformLayout();
-            this.panel21.ResumeLayout(false);
-            this.panel21.PerformLayout();
+            this.panelHexValue.ResumeLayout(false);
+            this.panelHexValue.PerformLayout();
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
             this.panel13.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTargetChecksum32)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
             this.panel15.ResumeLayout(false);
             this.panel15.PerformLayout();
             this.panel18.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownP3Max)).EndInit();
             this.panel16.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownP2Max)).EndInit();
             this.panel19.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownP3Base)).EndInit();
             this.panel14.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownP1Max)).EndInit();
             this.panel17.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownP2Base)).EndInit();
             this.panel12.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownP1Base)).EndInit();
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
             this.panel27.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown14)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTemp2Max)).EndInit();
             this.panel26.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTemp2Base)).EndInit();
             this.panel25.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown15)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTemp2Min)).EndInit();
             this.panel24.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTemp1Max)).EndInit();
             this.panel7.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTemp1Min)).EndInit();
             this.panel5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTemp1Base)).EndInit();
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
             this.panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTdpMax)).EndInit();
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTdpBase)).EndInit();
             this.Adjustment.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -1551,66 +1551,66 @@
 
         private System.Windows.Forms.Button openBIOS;
         private System.Windows.Forms.Button saveBIOS;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textBoxFileName;
         private System.Windows.Forms.Label fileName;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label board;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox textBoxBoard;
         private System.Windows.Forms.Label name;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox textBoxBiosName;
         private System.Windows.Forms.Label version;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox textBoxVersion;
         private System.Windows.Forms.Label date;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox textBoxDate;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxChecksum32;
         private System.Windows.Forms.Label checkSum;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBoxModel;
         private System.Windows.Forms.Label model;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBoxModifiedDate;
         private System.Windows.Forms.TextBox textBox12;
         private System.Windows.Forms.TextBox textBox11;
         private System.Windows.Forms.TabPage tabPage5;
         private System.Windows.Forms.Panel panel20;
-        private System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.TextBox textBoxLittleEndian;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.TextBox textBoxBigEndian;
         private System.Windows.Forms.Panel panel22;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBoxDecValue;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Panel panel21;
+        private System.Windows.Forms.Panel panelHexValue;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.TextBox textBox15;
+        private System.Windows.Forms.TextBox textBoxChecksum8;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button quickFix;
         private System.Windows.Forms.Panel panel13;
-        private System.Windows.Forms.NumericUpDown numericUpDown6;
+        private System.Windows.Forms.NumericUpDown numericUpDownTargetChecksum32;
         private System.Windows.Forms.Label targetCS;
         private System.Windows.Forms.Label fixCS;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel15;
         private System.Windows.Forms.Panel panel18;
-        private System.Windows.Forms.NumericUpDown numericUpDown12;
+        private System.Windows.Forms.NumericUpDown numericUpDownP3Max;
         private System.Windows.Forms.Panel panel16;
-        private System.Windows.Forms.NumericUpDown numericUpDown10;
+        private System.Windows.Forms.NumericUpDown numericUpDownP2Max;
         private System.Windows.Forms.Panel panel19;
-        private System.Windows.Forms.NumericUpDown numericUpDown11;
+        private System.Windows.Forms.NumericUpDown numericUpDownP3Base;
         private System.Windows.Forms.Panel panel14;
-        private System.Windows.Forms.NumericUpDown numericUpDown8;
+        private System.Windows.Forms.NumericUpDown numericUpDownP1Max;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel17;
-        private System.Windows.Forms.NumericUpDown numericUpDown9;
+        private System.Windows.Forms.NumericUpDown numericUpDownP2Base;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel12;
-        private System.Windows.Forms.NumericUpDown numericUpDown7;
+        private System.Windows.Forms.NumericUpDown numericUpDownP1Base;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label5;
@@ -1620,26 +1620,26 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.NumericUpDown numericUpDown14;
+        private System.Windows.Forms.NumericUpDown numericUpDownTemp2Max;
         private System.Windows.Forms.RadioButton tempFixed;
         private System.Windows.Forms.RadioButton tempAdjustable;
         private System.Windows.Forms.Label tempSlide;
         private System.Windows.Forms.Panel panel27;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Panel panel26;
-        private System.Windows.Forms.NumericUpDown numericUpDown13;
+        private System.Windows.Forms.NumericUpDown numericUpDownTemp2Base;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Panel panel25;
-        private System.Windows.Forms.NumericUpDown numericUpDown15;
+        private System.Windows.Forms.NumericUpDown numericUpDownTemp2Min;
         private System.Windows.Forms.Panel panel24;
-        private System.Windows.Forms.NumericUpDown numericUpDown4;
+        private System.Windows.Forms.NumericUpDown numericUpDownTemp1Max;
         private System.Windows.Forms.Label minVal;
         private System.Windows.Forms.Label defVal;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.NumericUpDown numericUpDown5;
+        private System.Windows.Forms.NumericUpDown numericUpDownTemp1Min;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.NumericUpDown numericUpDown3;
+        private System.Windows.Forms.NumericUpDown numericUpDownTemp1Base;
         private System.Windows.Forms.Label maxVal;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.RadioButton tdpFixed;
@@ -1648,9 +1648,9 @@
         private System.Windows.Forms.Label baseTDP;
         private System.Windows.Forms.Label maxTDP;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.NumericUpDown numericUpDownTdpMax;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown numericUpDownTdpBase;
         private System.Windows.Forms.TabControl Adjustment;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label9;

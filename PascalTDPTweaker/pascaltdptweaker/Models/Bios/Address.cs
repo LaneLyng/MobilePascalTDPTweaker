@@ -23,7 +23,7 @@ namespace PascalTDPTweaker.Models.Bios
 
         public byte[] ID { get; set; }
 
-        public string Code { get; set; }
+        public string Config { get; set; }
 
         public int Low { get; set; }
 

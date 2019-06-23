@@ -94,11 +94,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\Bios\Address.cs" />
+    <Compile Include="Models\Bios\Preset.cs" />
     <Compile Include="Models\Helper.cs" />
     <Compile Include="Models\Form\IndexCollector.cs" />
     <Compile Include="Models\Bios\Model.cs" />
     <Compile Include="Models\Bios\Reader.cs" />
-    <Compile Include="Models\Bios\BiosConfig.cs" />
+    <Compile Include="Models\Bios\Config.cs" />
     <Compile Include="App\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>

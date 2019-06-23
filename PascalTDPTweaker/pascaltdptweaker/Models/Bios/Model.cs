@@ -12,16 +12,16 @@ namespace PascalTDPTweaker.Models.Bios
         // Basic info.
         public string Starter { get; set; }
         public string Date { get; set; }
-        public string BIOSName { get; set; }
+        public string BiosName { get; set; }
         public string Version { get; set; }
         public string Board { get; set; }
 
 
         // To be Modded.
-        public string BaseTDP { get; set; }
-        public string MaxTDP { get; set; }
-        public string TDPSlider { get; set; }
-        public string TDPSliderSignal { get; set; }
+        public string BaseTdp { get; set; }
+        public string MaxTdp { get; set; }
+        public string TdpSlider { get; set; }
+        public string TdpSliderSignal { get; set; }
 
         public string Power1Base { get; set; }
         public string Power1Max { get; set; }
@@ -42,12 +42,12 @@ namespace PascalTDPTweaker.Models.Bios
         public string Checksum32 { get; set; }
 
         // Preset.
-        public string PresetTDP1 { get; set; }
-        public string PresetTDP2 { get; set; }
+        public string PresetTdpBase { get; set; }
+        public string PresetTdpMax { get; set; }
         public string PresetPower1 { get; set; }
         public string PresetPower2 { get; set; }
         public string PresetPower3 { get; set; }
-        public string PresetTDPSlider { get; set; }
-        public string PresetTempT { get; set; }
+        public string PresetTdpSlider { get; set; }
+        public string PresetTemp { get; set; }
     }
 }

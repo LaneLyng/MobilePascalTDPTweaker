@@ -36,7 +36,7 @@ namespace PascalTDPTweaker
             open.Filter = "BIOS Files (*.rom; *.bin)|*.rom;*.bin";
             // Default value for mobile card: mobile = 1; desktop = 2.
             type = 1;
-            
+
             if (open.ShowDialog() == DialogResult.OK)
             {
                 // Load models config file.
@@ -44,9 +44,9 @@ namespace PascalTDPTweaker
 
                 InitForm();
                 ic = new Models.Form.IndexCollector();
-                textBox6.Text = open.SafeFileName;
+                textBoxFileName.Text = open.SafeFileName;
                 DateTime lastModified = File.GetLastWriteTime(open.FileName);
-                textBox3.Text = lastModified.ToString(FORMAT);
+                textBoxModifiedDate.Text = lastModified.ToString(FORMAT);
                 bios = File.ReadAllBytes(open.FileName);
                 open.Dispose();
 
@@ -64,53 +64,48 @@ namespace PascalTDPTweaker
                     ic.BlackSreenIndex = SetValueIndex(reader.StartAdr.ID, bios, i, reader.StartAdr.Low, reader.StartAdr.High, null, 0, ic.BlackSreenIndex, 1);
 
                     // vBIOS information section. //
-                    ic.DateIndex = SetTextIndex(reader.DateAdr.ID, bios, i, reader.DateAdr.Low, reader.DateAdr.High, textBox10, 1, ic.DateIndex, 0);
-                    ic.NameIndex = SetTextIndex(reader.NameAdr.ID, bios, i, reader.NameAdr.Low, reader.NameAdr.High, textBox8, 1, ic.NameIndex, 1);
-                    ic.VersionIndex = SetTextIndex(reader.VerAdr.ID, bios, i, reader.VerAdr.Low, reader.VerAdr.High, textBox9, 1, ic.VersionIndex, 0);
-                    ic.BoardIndex = SetTextIndex(reader.BoardAdr.ID, bios, i, reader.BoardAdr.Low, reader.BoardAdr.High, textBox7, 1, ic.BoardIndex, 0);
+                    ic.DateIndex = SetTextIndex(reader.DateAdr.ID, bios, i, reader.DateAdr.Low, reader.DateAdr.High, textBoxDate, 1, ic.DateIndex, 0);
+                    ic.NameIndex = SetTextIndex(reader.NameAdr.ID, bios, i, reader.NameAdr.Low, reader.NameAdr.High, textBoxBiosName, 1, ic.NameIndex, 1);
+                    ic.VersionIndex = SetTextIndex(reader.VerAdr.ID, bios, i, reader.VerAdr.Low, reader.VerAdr.High, textBoxVersion, 1, ic.VersionIndex, 0);
+                    ic.BoardIndex = SetTextIndex(reader.BoardAdr.ID, bios, i, reader.BoardAdr.Low, reader.BoardAdr.High, textBoxBoard, 1, ic.BoardIndex, 0);
                     // End information section.
 
                     // To be modded. //
                     // TDP section. //
-                    // Negative value to shift forward.
-                    ic.TdpSliderIndex = SetRadioIndex(reader.TDPSliderAdr.ID, bios, i, reader.TDPSliderAdr.Low, reader.TDPSliderAdr.High, tdpAdjustable, tdpFixed, reader.TDPSliderSignal.Code, ic.TdpSliderIndex);
-                    ic.BaseTdpIndex = SetValueIndex(reader.BaseTDPAdr.ID, bios, i, reader.BaseTDPAdr.Low, reader.BaseTDPAdr.High, numericUpDown1, 1, ic.BaseTdpIndex, 0);
-                    ic.MaxTdpIndex = SetValueIndex(reader.MaxTDPAdr.ID, bios, i, reader.MaxTDPAdr.Low, reader.MaxTDPAdr.High, numericUpDown2, 1, ic.MaxTdpIndex, 0);
+                    ic.TdpSliderIndex = SetRadioIndex(reader.TdpSliderAdr.ID, bios, i, reader.TdpSliderAdr.Low, reader.TdpSliderAdr.High, tdpAdjustable, tdpFixed, reader.TdpSliderSignal.Config, ic.TdpSliderIndex);
+                    ic.BaseTdpIndex = SetValueIndex(reader.BaseTdpAdr.ID, bios, i, reader.BaseTdpAdr.Low, reader.BaseTdpAdr.High, numericUpDownTdpBase, 1, ic.BaseTdpIndex, 0);
+                    ic.MaxTdpIndex = SetValueIndex(reader.MaxTdpAdr.ID, bios, i, reader.MaxTdpAdr.Low, reader.MaxTdpAdr.High, numericUpDownTdpMax, 1, ic.MaxTdpIndex, 0);
                     // End TDP section.
 
-                    // Extreme power section. //
-                    // 48 3F 00 00. (Mobile 1080 = 16200)
-                    ic.P1BaseTdpIndex = SetValueIndex(reader.Power1BaseAdr.ID, bios, i, reader.Power1BaseAdr.Low, reader.Power1BaseAdr.High, numericUpDown7, 1, ic.P1BaseTdpIndex, 0);
-                    ic.P1MaxTdpIndex = SetValueIndex(reader.Power1MaxAdr.ID, bios, i, reader.Power1MaxAdr.Low, reader.Power1MaxAdr.High, numericUpDown8, 1, ic.P1MaxTdpIndex, 0);
+                    // Advanced power section. //
+                    ic.P1BaseTdpIndex = SetValueIndex(reader.Power1BaseAdr.ID, bios, i, reader.Power1BaseAdr.Low, reader.Power1BaseAdr.High, numericUpDownP1Base, 1, ic.P1BaseTdpIndex, 0);
+                    ic.P1MaxTdpIndex = SetValueIndex(reader.Power1MaxAdr.ID, bios, i, reader.Power1MaxAdr.Low, reader.Power1MaxAdr.High, numericUpDownP1Max, 1, ic.P1MaxTdpIndex, 0);
 
-                    // 50 B1 03 00. (Mobile 1080 = 242000)
-                    ic.P2BaseTdpIndex = SetValueIndex(reader.Power2BaseAdr.ID, bios, i, reader.Power2BaseAdr.Low, reader.Power2BaseAdr.High, numericUpDown9, 1, ic.P2BaseTdpIndex, 0);
-                    ic.P2MaxTdpIndex = SetValueIndex(reader.Power2MaxAdr.ID, bios, i, reader.Power2MaxAdr.Low, reader.Power2MaxAdr.High, numericUpDown10, 1, ic.P2MaxTdpIndex, 0);
+                    ic.P2BaseTdpIndex = SetValueIndex(reader.Power2BaseAdr.ID, bios, i, reader.Power2BaseAdr.Low, reader.Power2BaseAdr.High, numericUpDownP2Base, 1, ic.P2BaseTdpIndex, 0);
+                    ic.P2MaxTdpIndex = SetValueIndex(reader.Power2MaxAdr.ID, bios, i, reader.Power2MaxAdr.Low, reader.Power2MaxAdr.High, numericUpDownP2Max, 1, ic.P2MaxTdpIndex, 0);
 
-                    // 80 19 02 00. (Mobile 1080 = 137600)
-                    ic.P3BaseTdpIndex = SetValueIndex(reader.Power3BaseAdr.ID, bios, i, reader.Power3BaseAdr.Low, reader.Power3BaseAdr.High, numericUpDown11, 1, ic.P3BaseTdpIndex, 0);
-                    ic.P3MaxTdpIndex = SetValueIndex(reader.Power3MaxAdr.ID, bios, i, reader.Power3MaxAdr.Low, reader.Power3MaxAdr.High, numericUpDown12, 1, ic.P3MaxTdpIndex, 0);
+                    ic.P3BaseTdpIndex = SetValueIndex(reader.Power3BaseAdr.ID, bios, i, reader.Power3BaseAdr.Low, reader.Power3BaseAdr.High, numericUpDownP3Base, 1, ic.P3BaseTdpIndex, 0);
+                    ic.P3MaxTdpIndex = SetValueIndex(reader.Power3MaxAdr.ID, bios, i, reader.Power3MaxAdr.Low, reader.Power3MaxAdr.High, numericUpDownP3Max, 1, ic.P3MaxTdpIndex, 0);
                     // End extreme power section.
 
                     // Temperature section. //   
-                    // Positive value to shift backward, then negative to shift forward.
-                    ic.TempSliderIndex = SetRadioIndex(reader.TempSliderAdr.ID, bios, i, reader.TempSliderAdr.Low, reader.TempSliderAdr.High, tempAdjustable, tempFixed, reader.TempSliderSignal.Code, ic.TempSliderIndex); 
-                    ic.T1BaseTempIndex = SetValueIndex(reader.Temp1BaseAdr.ID, bios, i, reader.Temp1BaseAdr.Low, reader.Temp1BaseAdr.High, numericUpDown3, 2, ic.T1BaseTempIndex, 0);
-                    ic.T1MaxTempIndex = SetValueIndex(reader.Temp1MaxAdr.ID, bios, i, reader.Temp1MaxAdr.Low, reader.Temp1MaxAdr.High, numericUpDown4, 2, ic.T1MaxTempIndex, 0);
-                    ic.T1MinTempIndex = SetValueIndex(reader.Temp1MinAdr.ID, bios, i, reader.Temp1MinAdr.Low, reader.Temp1MinAdr.High, numericUpDown5, 2, ic.T1MinTempIndex, 0);
+                    ic.TempSliderIndex = SetRadioIndex(reader.TempSliderAdr.ID, bios, i, reader.TempSliderAdr.Low, reader.TempSliderAdr.High, tempAdjustable, tempFixed, reader.TempSliderSignal.Config, ic.TempSliderIndex);
+                    ic.T1BaseTempIndex = SetValueIndex(reader.Temp1BaseAdr.ID, bios, i, reader.Temp1BaseAdr.Low, reader.Temp1BaseAdr.High, numericUpDownTemp1Base, 2, ic.T1BaseTempIndex, 0);
+                    ic.T1MaxTempIndex = SetValueIndex(reader.Temp1MaxAdr.ID, bios, i, reader.Temp1MaxAdr.Low, reader.Temp1MaxAdr.High, numericUpDownTemp1Max, 2, ic.T1MaxTempIndex, 0);
+                    ic.T1MinTempIndex = SetValueIndex(reader.Temp1MinAdr.ID, bios, i, reader.Temp1MinAdr.Low, reader.Temp1MinAdr.High, numericUpDownTemp1Min, 2, ic.T1MinTempIndex, 0);
 
                     // Additional Temperature settings.
-                    ic.T2BaseTempIndex = SetValueIndex(reader.Temp2BaseAdr.ID, bios, i, reader.Temp2BaseAdr.Low, reader.Temp2BaseAdr.High, numericUpDown13, 2, ic.T2BaseTempIndex, 0);
-                    ic.T2MaxTempIndex = SetValueIndex(reader.Temp2MaxAdr.ID, bios, i, reader.Temp2MaxAdr.Low, reader.Temp2MaxAdr.High, numericUpDown14, 2, ic.T2MaxTempIndex, 0);
-                    ic.T2MinTempIndex = SetValueIndex(reader.Temp2MinAdr.ID, bios, i, reader.Temp2MinAdr.Low, reader.Temp2MinAdr.High, numericUpDown15, 2, ic.T2MinTempIndex, 0);
+                    ic.T2BaseTempIndex = SetValueIndex(reader.Temp2BaseAdr.ID, bios, i, reader.Temp2BaseAdr.Low, reader.Temp2BaseAdr.High, numericUpDownTemp2Base, 2, ic.T2BaseTempIndex, 0);
+                    ic.T2MaxTempIndex = SetValueIndex(reader.Temp2MaxAdr.ID, bios, i, reader.Temp2MaxAdr.Low, reader.Temp2MaxAdr.High, numericUpDownTemp2Max, 2, ic.T2MaxTempIndex, 0);
+                    ic.T2MinTempIndex = SetValueIndex(reader.Temp2MinAdr.ID, bios, i, reader.Temp2MinAdr.Low, reader.Temp2MinAdr.High, numericUpDownTemp2Min, 2, ic.T2MinTempIndex, 0);
                     // End Temperature section.
 
                     // Checksum index.
                     ic.CheckSum32Index = SetValueIndex(reader.Checksum32Adr.ID, bios, i, reader.Checksum32Adr.Low, reader.Checksum32Adr.High, null, 0, ic.CheckSum32Index, 0);
-                    ic.CheckSum8Index = SetTextIndex(reader.Checksum8Adr.ID, bios, i, reader.Checksum8Adr.Low, reader.Checksum8Adr.High, textBox15, 2, ic.CheckSum8Index, 2);
+                    ic.CheckSum8Index = SetTextIndex(reader.Checksum8Adr.ID, bios, i, reader.Checksum8Adr.Low, reader.Checksum8Adr.High, textBoxChecksum8, 2, ic.CheckSum8Index, 2);
 
                     // Set unknown if date index cannot be found.
-                    if (ic.DateIndex == -1) textBox10.Text = "Unknown";
+                    if (ic.DateIndex == -1) textBoxDate.Text = "Unknown";
                 }
             }
         }
@@ -121,10 +116,10 @@ namespace PascalTDPTweaker
             switch (extra)
             {
                 case 1:
-                    DisplayModel(index, this.textBox2, this.textBox8);
+                    DisplayModel(index, this.textBoxModel, this.textBoxBiosName);
                     break;
                 case 2:
-                    this.checksum8bit = this.textBox15.Text;
+                    this.checksum8bit = this.textBoxChecksum8.Text;
                     Is8bitCorrect();
                     break;
                 default:
@@ -218,46 +213,36 @@ namespace PascalTDPTweaker
 
             if (ic.CheckSum32Index == 0)
                 // No vBIOS file is opened.
-                MessageBox.Show("Unhandled exception (empty)! BIOS cannot be saved.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error); 
+                MessageBox.Show("Unhandled exception (empty)! BIOS cannot be saved.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
             else if (ic.CheckSum32Index == -1)
                 // Cannot locate "Power" String.
                 MessageBox.Show("Unhandled exception (corrupted string section)! BIOS cannot be saved.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
             else if (save.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
-                if (ic.BaseTdpIndex != -1 && ic.MaxTdpIndex != -1)
-                {
-                    ModBIOSValue(bios, ic.BaseTdpIndex, (int)numericUpDown1.Value, 1);
-                    ModBIOSValue(bios, ic.MaxTdpIndex, (int)numericUpDown2.Value, 1);
-                }
-                if (ic.T1BaseTempIndex != -1 && ic.T1MaxTempIndex != -1 && ic.T1MinTempIndex != -1)
-                {
-                    ModBIOSValue(bios, ic.T1BaseTempIndex, (int)numericUpDown3.Value, 2);
-                    ModBIOSValue(bios, ic.T1MaxTempIndex, (int)numericUpDown4.Value, 2);
-                    ModBIOSValue(bios, ic.T1MinTempIndex, (int)numericUpDown5.Value, 2);
-                }
-                if (ic.T2BaseTempIndex != -1 && ic.T2MaxTempIndex != -1 && ic.T2MinTempIndex != -1)
-                {
-                    ModBIOSValue(bios, ic.T2BaseTempIndex, (int)numericUpDown13.Value, 2);
-                    ModBIOSValue(bios, ic.T2MaxTempIndex, (int)numericUpDown14.Value, 2);
-                    ModBIOSValue(bios, ic.T2MinTempIndex, (int)numericUpDown15.Value, 2);
-                }
-                if (ic.TdpSliderIndex != -1) ModBIOSSlide(bios, ic.TdpSliderIndex, tdpAdjustable.Checked, tdpFixed.Checked, reader.TDPSliderSignal.Code);
-                if (ic.TempSliderIndex != -1) ModBIOSSlide(bios, ic.TempSliderIndex, tempAdjustable.Checked, tempFixed.Checked, reader.TempSliderSignal.Code);
-                if (ic.P1BaseTdpIndex != -1 && ic.P1MaxTdpIndex != -1)
-                {
-                    ModBIOSValue(bios, ic.P1BaseTdpIndex, (int)numericUpDown7.Value, 1);
-                    ModBIOSValue(bios, ic.P1MaxTdpIndex, (int)numericUpDown8.Value, 1);
-                }
-                if (ic.P2BaseTdpIndex != -1 && ic.P2MaxTdpIndex  != -1)
-                {
-                    ModBIOSValue(bios, ic.P2BaseTdpIndex, (int)numericUpDown9.Value, 1);
-                    ModBIOSValue(bios, ic.P2MaxTdpIndex , (int)numericUpDown10.Value, 1);
-                }
-                if (ic.P3BaseTdpIndex != -1 && ic.P3MaxTdpIndex != -1)
-                {
-                    ModBIOSValue(bios, ic.P3BaseTdpIndex, (int)numericUpDown11.Value, 1);
-                    ModBIOSValue(bios, ic.P3MaxTdpIndex, (int)numericUpDown12.Value, 1);
-                }
+
+                ModBIOSValue(bios, ic.BaseTdpIndex, (int)numericUpDownTdpBase.Value, 1);
+                ModBIOSValue(bios, ic.MaxTdpIndex, (int)numericUpDownTdpMax.Value, 1);
+
+                ModBIOSValue(bios, ic.P1BaseTdpIndex, (int)numericUpDownP1Base.Value, 1);
+                ModBIOSValue(bios, ic.P1MaxTdpIndex, (int)numericUpDownP1Max.Value, 1);
+
+                ModBIOSValue(bios, ic.P2BaseTdpIndex, (int)numericUpDownP2Base.Value, 1);
+                ModBIOSValue(bios, ic.P2MaxTdpIndex, (int)numericUpDownP2Max.Value, 1);
+
+                ModBIOSValue(bios, ic.P3BaseTdpIndex, (int)numericUpDownP3Base.Value, 1);
+                ModBIOSValue(bios, ic.P3MaxTdpIndex, (int)numericUpDownP3Max.Value, 1);
+
+                ModBIOSValue(bios, ic.T1BaseTempIndex, (int)numericUpDownTemp1Base.Value, 2);
+                ModBIOSValue(bios, ic.T1MaxTempIndex, (int)numericUpDownTemp1Max.Value, 2);
+                ModBIOSValue(bios, ic.T1MinTempIndex, (int)numericUpDownTemp1Min.Value, 2);
+
+                ModBIOSValue(bios, ic.T2BaseTempIndex, (int)numericUpDownTemp2Base.Value, 2);
+                ModBIOSValue(bios, ic.T2MaxTempIndex, (int)numericUpDownTemp2Max.Value, 2);
+                ModBIOSValue(bios, ic.T2MinTempIndex, (int)numericUpDownTemp2Min.Value, 2);
+
+                ModBIOSSlide(bios, ic.TdpSliderIndex, tdpAdjustable.Checked, tdpFixed.Checked, reader.TdpSliderSignal.Config);
+                ModBIOSSlide(bios, ic.TempSliderIndex, tempAdjustable.Checked, tempFixed.Checked, reader.TempSliderSignal.Config);
+
                 long newCS = CalculateChecksum(bios);
                 long offset = newCS - checksumValue;
 
@@ -267,7 +252,7 @@ namespace PascalTDPTweaker
                     // Fix non-gysn vBIOS that has header.
                     //BlackScreenFix(); 
                     File.WriteAllBytes(save.FileName, bios);
-                }    
+                }
                 else
                     MessageBox.Show("Unhandled exception (corrupted string section)! BIOS cannot be saved.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -276,19 +261,18 @@ namespace PascalTDPTweaker
         // Load modded preset values for major mobile models.
         private void Preset_Click(object sender, EventArgs e)
         {
-            string model = textBox2.Text;
             try
             {
-                numericUpDown1.Value = reader.AssignPresetValues(model, 1);
-                numericUpDown2.Value = reader.AssignPresetValues(model, 2);
-                numericUpDown7.Value = reader.AssignPresetValues(model, 7);
-                numericUpDown8.Value = reader.AssignPresetValues(model, 8);
-                numericUpDown9.Value = reader.AssignPresetValues(model, 9);
-                numericUpDown10.Value = reader.AssignPresetValues(model, 10);
-                numericUpDown11.Value = reader.AssignPresetValues(model, 11);
-                numericUpDown12.Value = reader.AssignPresetValues(model, 12);
-                numericUpDown3.Value = numericUpDown4.Value = numericUpDown5.Value = reader.AssignPresetValues(model, 5);
-                numericUpDown13.Value = numericUpDown14.Value = numericUpDown15.Value = reader.AssignPresetValues(model, 5);
+                numericUpDownTdpBase.Value = reader.BaseTdpPreset.Value;
+                numericUpDownTdpMax.Value = reader.MaxTdpPreset.Value;
+                numericUpDownP1Base.Value = reader.Power1Preset.Value;
+                numericUpDownP1Max.Value = reader.Power1Preset.Value;
+                numericUpDownP2Base.Value = reader.Power2Preset.Value;
+                numericUpDownP2Max.Value = reader.Power2Preset.Value;
+                numericUpDownP3Base.Value = reader.Power3Preset.Value;
+                numericUpDownP3Max.Value = reader.Power3Preset.Value;
+                numericUpDownTemp1Base.Value = numericUpDownTemp1Max.Value = numericUpDownTemp1Min.Value = reader.TempPreset.Value;
+                numericUpDownTemp2Base.Value = numericUpDownTemp2Max.Value = numericUpDownTemp2Min.Value = reader.TempPreset.Value;
 
                 tdpAdjustable.Checked = true;
                 tdpFixed.Checked = false;
@@ -297,7 +281,7 @@ namespace PascalTDPTweaker
             {
                 System.Media.SystemSounds.Beep.Play();
                 MessageBox.Show("Preset is not supported for this model.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }          
+            }
         }
 
         // Call CorrectCS to correct checksum. Standalone checksum correction.
@@ -307,7 +291,7 @@ namespace PascalTDPTweaker
                 MessageBox.Show("Unhandled exception (corrupted string section)! Checksum cannot be corrected.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
             else if (ic.CheckSum32Index != 0)
             {
-                long fixCS = (long)numericUpDown6.Value;
+                long fixCS = (long)numericUpDownTargetChecksum32.Value;
                 long offset = checksumValue - fixCS;
                 Console.WriteLine(offset);
                 if (offset == 0)
@@ -328,7 +312,7 @@ namespace PascalTDPTweaker
             // Only fix mobile cards == 1.
             if (type == 1 && ic.BlackSreenIndex != 0)
             {
-                byte[] new_bios = new byte[bios.Length-ic.BlackSreenIndex]; // For backup.
+                byte[] new_bios = new byte[bios.Length - ic.BlackSreenIndex]; // For backup.
                 int j = ic.BlackSreenIndex;
 
                 for (int i = 0; i < new_bios.Length; i++)
@@ -345,7 +329,7 @@ namespace PascalTDPTweaker
         // Correct checksum based on offset.
         private int CorrectCS(long offset, int mode)
         {
-            long fixCS = (long)numericUpDown6.Value;
+            long fixCS = (long)numericUpDownTargetChecksum32.Value;
             int range = ic.CheckSum32Index + SAFE_LENGTH;
             long rest = offset;
 
@@ -410,43 +394,46 @@ namespace PascalTDPTweaker
         // Modify vBIOS values in place.
         private void ModBIOSValue(byte[] file, int index, int decValue, int type)
         {
-            string hexValue = "";
-            // TDP = 1.
-            if (type == 1)
+            if (index != -1)
             {
-                //Console.WriteLine(decValue);
-                hexValue = decValue.ToString("X2");
-                if (hexValue.Length < 8)
+                string hexValue = "";
+                // TDP = 1.
+                if (type == 1)
                 {
-                    hexValue = "00000000" + hexValue;
-                    hexValue = hexValue.Substring(hexValue.Length - 8);
-                    //Console.WriteLine(hexValue);
+                    //Console.WriteLine(decValue);
+                    hexValue = decValue.ToString("X2");
+                    if (hexValue.Length < 8)
+                    {
+                        hexValue = "00000000" + hexValue;
+                        hexValue = hexValue.Substring(hexValue.Length - 8);
+                        //Console.WriteLine(hexValue);
+                    }
+                    byte[] data = Models.Helper.HexToDecString(Models.Helper.ReverseTDP(hexValue));
+                    int j = index;
+                    for (int i = 0; i < data.Length; i++)
+                    {
+                        bios[j] = data[i];
+                        j++;
+                    }
                 }
-                byte[] data = Models.Helper.HexToDecString(Models.Helper.ReverseTDP(hexValue));
-                int j = index;
-                for (int i = 0; i < data.Length; i++)
+                // Temperature = 2.
+                else if (type == 2)
                 {
-                    bios[j] = data[i];
-                    j++;
-                }
-            }
-            // Temperature = 2.
-            else if (type == 2)
-            {
-                //Console.WriteLine(decValue);
-                hexValue = (decValue*32).ToString("X2");
-                if (hexValue.Length < 4)
-                {
-                    hexValue = "0000" + hexValue;
-                    hexValue = hexValue.Substring(hexValue.Length - 4);
-                    //Console.WriteLine(hexValue);
-                }
-                byte[] data = Models.Helper.HexToDecString(Models.Helper.ReverseTemp(hexValue));
-                int j = index;
-                for (int i = 0; i < data.Length; i++)
-                {
-                    bios[j] = data[i];
-                    j++;
+                    //Console.WriteLine(decValue);
+                    hexValue = (decValue * 32).ToString("X2");
+                    if (hexValue.Length < 4)
+                    {
+                        hexValue = "0000" + hexValue;
+                        hexValue = hexValue.Substring(hexValue.Length - 4);
+                        //Console.WriteLine(hexValue);
+                    }
+                    byte[] data = Models.Helper.HexToDecString(Models.Helper.ReverseTemp(hexValue));
+                    int j = index;
+                    for (int i = 0; i < data.Length; i++)
+                    {
+                        bios[j] = data[i];
+                        j++;
+                    }
                 }
             }
         }
@@ -624,8 +611,8 @@ namespace PascalTDPTweaker
 
             if (lastDigits.Equals("00"))
             {
-                textBox15.Text = checksum8bit + "=>[" + checksum8bit + "]";
-                textBox15.BackColor = System.Drawing.Color.LemonChiffon;
+                textBoxChecksum8.Text = checksum8bit + "=>[" + checksum8bit + "]";
+                textBoxChecksum8.BackColor = System.Drawing.Color.LemonChiffon;
                 return 1;
             }
             else
@@ -637,23 +624,23 @@ namespace PascalTDPTweaker
                     diff = (bit - ld).ToString("X2");
                 else
                     diff = (256 - ld + bit).ToString("X2");
-                textBox15.Text = checksum8bit + "=>[" + diff + "]";
-                textBox15.BackColor = Color.White;
+                textBoxChecksum8.Text = checksum8bit + "=>[" + diff + "]";
+                textBoxChecksum8.BackColor = Color.White;
                 return -1;
-            }    
+            }
         }
 
         // Set checksum value on application.
         private void SetChecksum(long checksum)
         {
             string r = checksum.ToString("X2");
-            textBox1.Text = "0" + r + " (" + checksum + ")";
-            numericUpDown6.Value = checksum;
+            textBoxChecksum32.Text = "0" + r + " (" + checksum + ")";
+            numericUpDownTargetChecksum32.Value = checksum;
             // Only check if 8 bit correct.
             if ((r.Substring(r.Length - 2)).Equals("00"))
-                textBox1.BackColor = System.Drawing.Color.LemonChiffon;
+                textBoxChecksum32.BackColor = System.Drawing.Color.LemonChiffon;
             else
-                textBox1.BackColor = Color.White;
+                textBoxChecksum32.BackColor = Color.White;
         }
 
         // Reset values and indices when new vBIOS is open.
@@ -662,27 +649,27 @@ namespace PascalTDPTweaker
             bios = null;
             checksumValue = -1;
 
-            textBox2.BackColor = Color.LightYellow;
-            textBox8.BackColor = Color.LightYellow;
-            textBox2.Text = "";
-            textBox7.Text = "";
-            textBox8.Text = "";
-            textBox9.Text = "";
-            textBox10.Text = "";
-            numericUpDown1.Value = 0;
-            numericUpDown2.Value = 0;
-            numericUpDown3.Value = 0;
-            numericUpDown4.Value = 0;
-            numericUpDown5.Value = 0;
-            numericUpDown7.Value = 0;
-            numericUpDown8.Value = 0;
-            numericUpDown9.Value = 0;
-            numericUpDown10.Value = 0;
-            numericUpDown11.Value = 0;
-            numericUpDown12.Value = 0;
-            numericUpDown13.Value = 0;
-            numericUpDown14.Value = 0;
-            numericUpDown15.Value = 0;
+            textBoxModel.BackColor = Color.LightYellow;
+            textBoxBiosName.BackColor = Color.LightYellow;
+            textBoxModel.Text = "";
+            textBoxBoard.Text = "";
+            textBoxBiosName.Text = "";
+            textBoxVersion.Text = "";
+            textBoxDate.Text = "";
+            numericUpDownTdpBase.Value = 0;
+            numericUpDownTdpMax.Value = 0;
+            numericUpDownTemp1Base.Value = 0;
+            numericUpDownTemp1Max.Value = 0;
+            numericUpDownTemp1Min.Value = 0;
+            numericUpDownP1Base.Value = 0;
+            numericUpDownP1Max.Value = 0;
+            numericUpDownP2Base.Value = 0;
+            numericUpDownP2Max.Value = 0;
+            numericUpDownP3Base.Value = 0;
+            numericUpDownP3Max.Value = 0;
+            numericUpDownTemp2Base.Value = 0;
+            numericUpDownTemp2Max.Value = 0;
+            numericUpDownTemp2Min.Value = 0;
             tdpAdjustable.Checked = false;
             tdpFixed.Checked = false;
             tempAdjustable.Checked = false;
@@ -699,19 +686,19 @@ namespace PascalTDPTweaker
                 if (hexValue.Length > 0)
                 {
                     long decValue = Convert.ToInt64(hexValue, 16);
-                    textBox5.Text = "" + decValue;
+                    textBoxDecValue.Text = "" + decValue;
                     while (hexValue.Length < 8)
                     {
                         hexValue = "0" + hexValue;
                     }
-                    textBox13.Text = Models.Helper.Spacing(hexValue);
-                    textBox14.Text = Models.Helper.Spacing(Models.Helper.ReverseTDP(hexValue));
+                    textBoxBigEndian.Text = Models.Helper.Spacing(hexValue);
+                    textBoxLittleEndian.Text = Models.Helper.Spacing(Models.Helper.ReverseTDP(hexValue));
                 }
                 else
                 {
-                    textBox5.Text = "";
-                    textBox13.Text = "";
-                    textBox14.Text = "";
+                    textBoxDecValue.Text = "";
+                    textBoxBigEndian.Text = "";
+                    textBoxLittleEndian.Text = "";
                 }
                 textChanging = false;
             }
@@ -723,7 +710,7 @@ namespace PascalTDPTweaker
             if (textChanging == false)
             {
                 textChanging = true;
-                string strValue = textBox5.Text;
+                string strValue = textBoxDecValue.Text;
                 if (strValue.Length > 0)
                 {
                     long decValue = Convert.ToInt64(strValue);
@@ -733,19 +720,19 @@ namespace PascalTDPTweaker
                         hexValue = "0" + hexValue;
                     }
                     textBox4.Text = hexValue;
-                    textBox13.Text = Models.Helper.Spacing(hexValue);
-                    textBox14.Text = Models.Helper.Spacing(Models.Helper.ReverseTDP(hexValue));
+                    textBoxBigEndian.Text = Models.Helper.Spacing(hexValue);
+                    textBoxLittleEndian.Text = Models.Helper.Spacing(Models.Helper.ReverseTDP(hexValue));
                 }
                 else
                 {
                     textBox4.Text = "";
-                    textBox13.Text = "";
-                    textBox14.Text = "";
+                    textBoxBigEndian.Text = "";
+                    textBoxLittleEndian.Text = "";
                 }
                 textChanging = false;
             }
         }
-        
+
         // Detect key press for input of base converter.
         private void TextBox4_KeyPress(object sender, System.Windows.Forms.KeyPressEventArgs e)
         {
