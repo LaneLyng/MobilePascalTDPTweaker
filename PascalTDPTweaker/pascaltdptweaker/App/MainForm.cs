@@ -134,8 +134,9 @@ namespace PascalTDPTweaker
             {
                 string name = tb2.Text;
                 name = name.Contains("!") ? name.Substring(1) : name;
-                string model = reader.ReadModel(name);
-                tb2.Text = name;
+                string token = reader.ReadModel(name);
+                tb2.Text = token.Split(',')[0] + name;
+                String model = token.Split(',')[1];
                 tb1.Text = model;
 
                 if (model == "Unsupported")

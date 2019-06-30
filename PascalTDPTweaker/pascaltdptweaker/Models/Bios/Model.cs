@@ -13,6 +13,7 @@ namespace PascalTDPTweaker.Models.Bios
         public string Starter { get; set; }
         public string Date { get; set; }
         public string BiosName { get; set; }
+        public string Prefix { get; set; }
         public string Version { get; set; }
         public string Board { get; set; }
 

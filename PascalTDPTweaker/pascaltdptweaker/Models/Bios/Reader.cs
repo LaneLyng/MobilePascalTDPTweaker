@@ -123,7 +123,7 @@ namespace PascalTDPTweaker.Models.Bios
                 this.Checksum8Adr = new Address(model.Checksum8);
 
                 AssignPresetValues(model);
-                return model.ModelName;
+                return model.Prefix + ',' + model.ModelName;
             }
             catch (Exception)
             {
@@ -154,7 +154,6 @@ namespace PascalTDPTweaker.Models.Bios
         // Read BIOS's name and determine model.
         public string ReadModel(string name)
         {
-            name = name.Length > 12 ? name.Substring(0, 12) : "";
             return AssignDecAddress(name);
         }
     }
