@@ -1,6 +1,6 @@
 # Mobile Pascal TDP Tweaker 
 
-Windows application designed to read and raise thermal design power (TDP) values of video BIOS that is based on Nvidia Pascal architecture; provided up to 20% extra graphics performance in computation and gaming.
+Windows application designed to read and raise thermal design power (TDP) values of video BIOS that is based on Nvidia Pascal and Turing architecture; provided up to 20% extra graphics performance in computation and gaming.
 
 ## Supported platforms
 - Windows (64/32bit)
@@ -9,7 +9,7 @@ Windows application designed to read and raise thermal design power (TDP) values
 - .NET Framework 4.6.1
 
 ## Features
-- Support reading and modifying vBIOS TDP values for mobile GTX 1060, GTX 1070, and GTX 1080
+- Support reading and modifying vBIOS TDP values for mobile Pascal and Turing cards
 - Support standalone 32-bit checksum correction
 - Embedded base converter
 
@@ -18,7 +18,7 @@ Windows application designed to read and raise thermal design power (TDP) values
 - Run 'Mobile Pascal TDP Tweaker.exe'
 - Open the vBIOS file that you would like to modify and adjust the TDP values
 - Save the vBIOS
-- Flash the modified vBIOS file into your chip through using a programmer
+- Flash the modified vBIOS file into your chip through using a hardware programmer
 
 ## Development
 - Recommend using Microsoft Visual Studio to build/compile
