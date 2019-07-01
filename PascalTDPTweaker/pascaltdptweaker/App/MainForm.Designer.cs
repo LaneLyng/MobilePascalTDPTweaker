@@ -785,7 +785,7 @@
             this.numericUpDownP3Max.Location = new System.Drawing.Point(-2, -2);
             this.numericUpDownP3Max.Margin = new System.Windows.Forms.Padding(2);
             this.numericUpDownP3Max.Maximum = new decimal(new int[] {
-            330000,
+            1000000,
             0,
             0,
             0});
@@ -815,7 +815,7 @@
             this.numericUpDownP2Max.Location = new System.Drawing.Point(-2, -2);
             this.numericUpDownP2Max.Margin = new System.Windows.Forms.Padding(2);
             this.numericUpDownP2Max.Maximum = new decimal(new int[] {
-            330000,
+            1000000,
             0,
             0,
             0});
@@ -845,7 +845,7 @@
             this.numericUpDownP3Base.Location = new System.Drawing.Point(-2, -2);
             this.numericUpDownP3Base.Margin = new System.Windows.Forms.Padding(2);
             this.numericUpDownP3Base.Maximum = new decimal(new int[] {
-            330000,
+            1000000,
             0,
             0,
             0});
@@ -875,7 +875,7 @@
             this.numericUpDownP1Max.Location = new System.Drawing.Point(-2, -2);
             this.numericUpDownP1Max.Margin = new System.Windows.Forms.Padding(2);
             this.numericUpDownP1Max.Maximum = new decimal(new int[] {
-            330000,
+            1000000,
             0,
             0,
             0});
@@ -915,7 +915,7 @@
             this.numericUpDownP2Base.Location = new System.Drawing.Point(-2, -2);
             this.numericUpDownP2Base.Margin = new System.Windows.Forms.Padding(2);
             this.numericUpDownP2Base.Maximum = new decimal(new int[] {
-            330000,
+            1000000,
             0,
             0,
             0});
@@ -955,7 +955,7 @@
             this.numericUpDownP1Base.Location = new System.Drawing.Point(-2, -2);
             this.numericUpDownP1Base.Margin = new System.Windows.Forms.Padding(2);
             this.numericUpDownP1Base.Maximum = new decimal(new int[] {
-            330000,
+            1000000,
             0,
             0,
             0});
