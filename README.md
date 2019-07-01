@@ -27,6 +27,6 @@ Windows application designed to read and raise thermal design power (TDP) values
 - To add new address field, modify the 'BiosConfig.cs'
 
 ## Future TO-DO list
-- Add support for mobile RTX and 11xx series cards
-- Add support for MX150 and 1050 series cards
-- Code clean-up
+- Fix the issue that RTX 2060 is regonized as RTX 2070
+- Add support for MX150 and GTX 1050 Ti
+- Furthur decouple MainForm application
