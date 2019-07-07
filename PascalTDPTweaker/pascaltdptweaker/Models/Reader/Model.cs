@@ -1,6 +1,6 @@
 ﻿using System.Xml.Serialization;
 
-namespace PascalTDPTweaker.Models.Bios
+namespace PascalTDPTweaker.Models.Reader
 {
     public class Model
     {
@@ -13,9 +13,9 @@ namespace PascalTDPTweaker.Models.Bios
         public string Starter { get; set; }
         public string Date { get; set; }
         public string BiosName { get; set; }
-        public string Prefix { get; set; }
         public string Version { get; set; }
         public string Board { get; set; }
+        public string DeviceID { get; set; }
 
 
         // To be Modded.

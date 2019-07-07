@@ -4,9 +4,9 @@ using System.IO;
 using System.Xml;
 using System.Xml.Serialization;
 
-namespace PascalTDPTweaker.Models.Bios
+namespace PascalTDPTweaker.Models.Reader
 {
-    class Reader
+    class Processor
     {
         // List to store read config file.
         private List<Model> models;
@@ -14,9 +14,9 @@ namespace PascalTDPTweaker.Models.Bios
         // Basic info address(location in BIOS).
         public Address StartAdr { get; set; }
         public Address DateAdr { get; set; }
-        public Address NameAdr { get; set; }
         public Address VerAdr { get; set; }
         public Address BoardAdr { get; set; }
+        public Address DeviceAdr { get; set; }
 
         // To be modded address.
         // Power.
@@ -77,9 +77,9 @@ namespace PascalTDPTweaker.Models.Bios
 
             this.StartAdr = new Address(model.Starter);
             this.DateAdr = new Address(model.Date);
-            this.NameAdr = new Address(model.BiosName);
             this.VerAdr = new Address(model.Version);
             this.BoardAdr= new Address(model.Board);
+            this.DeviceAdr = new Address(model.DeviceID);
         }
 
         // Assign binary address(to be modded).
@@ -123,7 +123,7 @@ namespace PascalTDPTweaker.Models.Bios
                 this.Checksum8Adr = new Address(model.Checksum8);
 
                 AssignPresetValues(model);
-                return model.Prefix + ',' + model.ModelName;
+                return model.ModelName + ',' + model.BiosName;
             }
             catch (Exception)
             {

@@ -4,15 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PascalTDPTweaker.Models.Form
+namespace PascalTDPTweaker.Models.Firmware
 {
     /* Indices to store addresses to be modded. */
-    class IndexCollector
+    public class IndexCollector
     {
         public IndexCollector()
         {
             DateIndex = -1;
-            NameIndex = -1;
+            DeviceIndex = -1;
             VersionIndex = -1;
             BoardIndex = -1;
 
@@ -45,11 +45,11 @@ namespace PascalTDPTweaker.Models.Form
         }
         public int DateIndex { get; set; }
 
-        public int NameIndex { get; set; }
-
         public int VersionIndex { get; set; }
 
         public int BoardIndex { get; set; }
+
+        public int DeviceIndex { get; set; }
 
         public int BaseTdpIndex { get; set; }
 

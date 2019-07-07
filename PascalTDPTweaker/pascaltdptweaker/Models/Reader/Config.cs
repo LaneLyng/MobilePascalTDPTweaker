@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Xml.Serialization;
 
-namespace PascalTDPTweaker.Models.Bios
+namespace PascalTDPTweaker.Models.Reader
 {
     [XmlRoot("configuration")]
     public class Config

@@ -61,5 +61,11 @@ namespace PascalTDPTweaker.Models
             string temp = s.Substring(2, 2) + s.Substring(0, 2);
             return temp;
         }
+
+        public static string HexToDeviceID(string s)
+        {
+            string id = s.Substring(2, 2) + s.Substring(0, 2) + " " + s.Substring(6, 2) + s.Substring(4, 2);
+            return id;
+        }
     }
 }

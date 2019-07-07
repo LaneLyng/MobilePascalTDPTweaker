@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PascalTDPTweaker.Models.Bios
+namespace PascalTDPTweaker.Models.Reader
 {
     class Preset
     {

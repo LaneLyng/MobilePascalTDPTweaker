@@ -1,7 +1,7 @@
 ﻿using System;
 
 
-namespace PascalTDPTweaker.Models.Bios
+namespace PascalTDPTweaker.Models.Reader
 {
     class Address
     {

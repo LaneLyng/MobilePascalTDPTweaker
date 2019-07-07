@@ -42,8 +42,8 @@
             this.date = new System.Windows.Forms.Label();
             this.textBoxDate = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.textBoxStarter = new System.Windows.Forms.TextBox();
+            this.textBoxDeviceID = new System.Windows.Forms.TextBox();
             this.textBoxModifiedDate = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.textBoxModel = new System.Windows.Forms.TextBox();
@@ -55,28 +55,29 @@
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.panel20 = new System.Windows.Forms.Panel();
             this.textBoxLittleEndian = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
+            this.littleEndian = new System.Windows.Forms.Label();
+            this.bigEndian = new System.Windows.Forms.Label();
             this.textBoxBigEndian = new System.Windows.Forms.TextBox();
             this.panel22 = new System.Windows.Forms.Panel();
             this.textBoxDecValue = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
+            this.decValue = new System.Windows.Forms.Label();
             this.panelHexValue = new System.Windows.Forms.Panel();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
+            this.textBoxHexValue = new System.Windows.Forms.TextBox();
+            this.hexValue = new System.Windows.Forms.Label();
+            this.baseConverter = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.textBoxChecksum8 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.cs8Fix = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.quickFix = new System.Windows.Forms.Button();
+            this.cs32Fix = new System.Windows.Forms.Button();
             this.panel13 = new System.Windows.Forms.Panel();
             this.numericUpDownTargetChecksum32 = new System.Windows.Forms.NumericUpDown();
             this.targetCS = new System.Windows.Forms.Label();
-            this.fixCS = new System.Windows.Forms.Label();
+            this.checksumCorrection = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.label4 = new System.Windows.Forms.Label();
+            this.attemptBlackScreenFix = new System.Windows.Forms.Label();
+            this.advancedPowerLimitsControl = new System.Windows.Forms.Label();
             this.panel15 = new System.Windows.Forms.Panel();
             this.panel18 = new System.Windows.Forms.Panel();
             this.numericUpDownP3Max = new System.Windows.Forms.NumericUpDown();
@@ -86,42 +87,46 @@
             this.numericUpDownP3Base = new System.Windows.Forms.NumericUpDown();
             this.panel14 = new System.Windows.Forms.Panel();
             this.numericUpDownP1Max = new System.Windows.Forms.NumericUpDown();
-            this.label8 = new System.Windows.Forms.Label();
+            this.maxPower3 = new System.Windows.Forms.Label();
             this.panel17 = new System.Windows.Forms.Panel();
             this.numericUpDownP2Base = new System.Windows.Forms.NumericUpDown();
-            this.label7 = new System.Windows.Forms.Label();
+            this.defPower3 = new System.Windows.Forms.Label();
             this.panel12 = new System.Windows.Forms.Panel();
             this.numericUpDownP1Base = new System.Windows.Forms.NumericUpDown();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.magicNum = new System.Windows.Forms.Label();
+            this.maxPower2 = new System.Windows.Forms.Label();
+            this.maxPower1 = new System.Windows.Forms.Label();
+            this.defPower2 = new System.Windows.Forms.Label();
+            this.defPower1 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.headerRemove = new System.Windows.Forms.RadioButton();
+            this.headerSection = new System.Windows.Forms.Label();
+            this.headerPreserve = new System.Windows.Forms.RadioButton();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.label1 = new System.Windows.Forms.Label();
+            this.basicPowerLimitsControl = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.label19 = new System.Windows.Forms.Label();
+            this.thermalLimitsControl = new System.Windows.Forms.Label();
             this.tempFixed = new System.Windows.Forms.RadioButton();
             this.tempAdjustable = new System.Windows.Forms.RadioButton();
             this.tempSlide = new System.Windows.Forms.Label();
             this.panel27 = new System.Windows.Forms.Panel();
             this.numericUpDownTemp2Max = new System.Windows.Forms.NumericUpDown();
-            this.label18 = new System.Windows.Forms.Label();
+            this.maxTemp2 = new System.Windows.Forms.Label();
             this.panel26 = new System.Windows.Forms.Panel();
             this.numericUpDownTemp2Base = new System.Windows.Forms.NumericUpDown();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
+            this.defTemp2 = new System.Windows.Forms.Label();
+            this.minTemp2 = new System.Windows.Forms.Label();
             this.panel25 = new System.Windows.Forms.Panel();
             this.numericUpDownTemp2Min = new System.Windows.Forms.NumericUpDown();
             this.panel24 = new System.Windows.Forms.Panel();
             this.numericUpDownTemp1Max = new System.Windows.Forms.NumericUpDown();
-            this.minVal = new System.Windows.Forms.Label();
-            this.defVal = new System.Windows.Forms.Label();
+            this.minTemp1 = new System.Windows.Forms.Label();
+            this.defTemp1 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.numericUpDownTemp1Min = new System.Windows.Forms.NumericUpDown();
             this.panel5 = new System.Windows.Forms.Panel();
             this.numericUpDownTemp1Base = new System.Windows.Forms.NumericUpDown();
-            this.maxVal = new System.Windows.Forms.Label();
+            this.maxTemp1 = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
             this.tdpFixed = new System.Windows.Forms.RadioButton();
             this.tdpAdjustable = new System.Windows.Forms.RadioButton();
@@ -158,6 +163,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownP2Base)).BeginInit();
             this.panel12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownP1Base)).BeginInit();
+            this.panel6.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel9.SuspendLayout();
@@ -319,8 +325,8 @@
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Control;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.textBox12);
-            this.panel1.Controls.Add(this.textBox11);
+            this.panel1.Controls.Add(this.textBoxStarter);
+            this.panel1.Controls.Add(this.textBoxDeviceID);
             this.panel1.Controls.Add(this.textBoxModifiedDate);
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.textBoxModel);
@@ -344,25 +350,25 @@
             this.panel1.Size = new System.Drawing.Size(580, 306);
             this.panel1.TabIndex = 27;
             // 
-            // textBox12
+            // textBoxStarter
             // 
-            this.textBox12.Enabled = false;
-            this.textBox12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.textBox12.Location = new System.Drawing.Point(416, 246);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(121, 25);
-            this.textBox12.TabIndex = 32;
-            this.textBox12.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxStarter.Enabled = false;
+            this.textBoxStarter.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.textBoxStarter.Location = new System.Drawing.Point(416, 246);
+            this.textBoxStarter.Name = "textBoxStarter";
+            this.textBoxStarter.Size = new System.Drawing.Size(121, 25);
+            this.textBoxStarter.TabIndex = 32;
+            this.textBoxStarter.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox11
+            // textBoxDeviceID
             // 
-            this.textBox11.Enabled = false;
-            this.textBox11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.textBox11.Location = new System.Drawing.Point(416, 210);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(121, 25);
-            this.textBox11.TabIndex = 31;
-            this.textBox11.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxDeviceID.Enabled = false;
+            this.textBoxDeviceID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.textBoxDeviceID.Location = new System.Drawing.Point(416, 210);
+            this.textBoxDeviceID.Name = "textBoxDeviceID";
+            this.textBoxDeviceID.Size = new System.Drawing.Size(121, 25);
+            this.textBoxDeviceID.TabIndex = 31;
+            this.textBoxDeviceID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBoxModifiedDate
             // 
@@ -459,9 +465,9 @@
             // 
             this.tabPage5.BackColor = System.Drawing.SystemColors.Control;
             this.tabPage5.Controls.Add(this.panel20);
-            this.tabPage5.Controls.Add(this.label11);
+            this.tabPage5.Controls.Add(this.baseConverter);
             this.tabPage5.Controls.Add(this.panel11);
-            this.tabPage5.Controls.Add(this.fixCS);
+            this.tabPage5.Controls.Add(this.checksumCorrection);
             this.tabPage5.Location = new System.Drawing.Point(4, 27);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
@@ -473,13 +479,13 @@
             // 
             this.panel20.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel20.Controls.Add(this.textBoxLittleEndian);
-            this.panel20.Controls.Add(this.label15);
-            this.panel20.Controls.Add(this.label14);
+            this.panel20.Controls.Add(this.littleEndian);
+            this.panel20.Controls.Add(this.bigEndian);
             this.panel20.Controls.Add(this.textBoxBigEndian);
             this.panel20.Controls.Add(this.panel22);
-            this.panel20.Controls.Add(this.label13);
+            this.panel20.Controls.Add(this.decValue);
             this.panel20.Controls.Add(this.panelHexValue);
-            this.panel20.Controls.Add(this.label12);
+            this.panel20.Controls.Add(this.hexValue);
             this.panel20.Location = new System.Drawing.Point(-3, 226);
             this.panel20.Margin = new System.Windows.Forms.Padding(2);
             this.panel20.Name = "panel20";
@@ -496,25 +502,25 @@
             this.textBoxLittleEndian.Size = new System.Drawing.Size(265, 25);
             this.textBoxLittleEndian.TabIndex = 41;
             // 
-            // label15
+            // littleEndian
             // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(280, 82);
-            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(158, 18);
-            this.label15.TabIndex = 40;
-            this.label15.Text = "Little-endian: ";
+            this.littleEndian.AutoSize = true;
+            this.littleEndian.Location = new System.Drawing.Point(280, 82);
+            this.littleEndian.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.littleEndian.Name = "littleEndian";
+            this.littleEndian.Size = new System.Drawing.Size(158, 18);
+            this.littleEndian.TabIndex = 40;
+            this.littleEndian.Text = "Little-endian: ";
             // 
-            // label14
+            // bigEndian
             // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(4, 82);
-            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(128, 18);
-            this.label14.TabIndex = 39;
-            this.label14.Text = "Big-endian: ";
+            this.bigEndian.AutoSize = true;
+            this.bigEndian.Location = new System.Drawing.Point(4, 82);
+            this.bigEndian.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.bigEndian.Name = "bigEndian";
+            this.bigEndian.Size = new System.Drawing.Size(128, 18);
+            this.bigEndian.TabIndex = 39;
+            this.bigEndian.Text = "Big-endian: ";
             // 
             // textBoxBigEndian
             // 
@@ -544,69 +550,69 @@
             this.textBoxDecValue.Name = "textBoxDecValue";
             this.textBoxDecValue.Size = new System.Drawing.Size(265, 25);
             this.textBoxDecValue.TabIndex = 37;
-            this.textBoxDecValue.TextChanged += new System.EventHandler(this.TextBox5_TextChanged);
-            this.textBoxDecValue.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBox5_KeyPress);
+            this.textBoxDecValue.TextChanged += new System.EventHandler(this.DecValueTextChanged);
+            this.textBoxDecValue.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DecValueKeyPress);
             // 
-            // label13
+            // decValue
             // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(280, 21);
-            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(148, 18);
-            this.label13.TabIndex = 32;
-            this.label13.Text = "Decimal Value:";
+            this.decValue.AutoSize = true;
+            this.decValue.Location = new System.Drawing.Point(280, 21);
+            this.decValue.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.decValue.Name = "decValue";
+            this.decValue.Size = new System.Drawing.Size(148, 18);
+            this.decValue.TabIndex = 32;
+            this.decValue.Text = "Decimal Value:";
             // 
             // panelHexValue
             // 
             this.panelHexValue.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panelHexValue.Controls.Add(this.textBox4);
+            this.panelHexValue.Controls.Add(this.textBoxHexValue);
             this.panelHexValue.Location = new System.Drawing.Point(9, 45);
             this.panelHexValue.Margin = new System.Windows.Forms.Padding(2);
             this.panelHexValue.Name = "panelHexValue";
             this.panelHexValue.Size = new System.Drawing.Size(265, 25);
             this.panelHexValue.TabIndex = 31;
             // 
-            // textBox4
+            // textBoxHexValue
             // 
-            this.textBox4.BackColor = System.Drawing.Color.Ivory;
-            this.textBox4.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.textBox4.Location = new System.Drawing.Point(-2, -2);
-            this.textBox4.MaxLength = 8;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(265, 25);
-            this.textBox4.TabIndex = 36;
-            this.textBox4.TextChanged += new System.EventHandler(this.TextBox4_TextChanged);
-            this.textBox4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBox4_KeyPress);
+            this.textBoxHexValue.BackColor = System.Drawing.Color.Ivory;
+            this.textBoxHexValue.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.textBoxHexValue.Location = new System.Drawing.Point(-2, -2);
+            this.textBoxHexValue.MaxLength = 8;
+            this.textBoxHexValue.Name = "textBoxHexValue";
+            this.textBoxHexValue.Size = new System.Drawing.Size(265, 25);
+            this.textBoxHexValue.TabIndex = 36;
+            this.textBoxHexValue.TextChanged += new System.EventHandler(this.HexValueTextChanged);
+            this.textBoxHexValue.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.HexValueKeyPress);
             // 
-            // label12
+            // hexValue
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(4, 21);
-            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(188, 18);
-            this.label12.TabIndex = 30;
-            this.label12.Text = "Hex Value(32 bit):";
+            this.hexValue.AutoSize = true;
+            this.hexValue.Location = new System.Drawing.Point(4, 21);
+            this.hexValue.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.hexValue.Name = "hexValue";
+            this.hexValue.Size = new System.Drawing.Size(188, 18);
+            this.hexValue.TabIndex = 30;
+            this.hexValue.Text = "Hex Value(32 bit):";
             // 
-            // label11
+            // baseConverter
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(202, 194);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(148, 18);
-            this.label11.TabIndex = 39;
-            this.label11.Text = "Base Converter";
+            this.baseConverter.AutoSize = true;
+            this.baseConverter.Location = new System.Drawing.Point(216, 194);
+            this.baseConverter.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.baseConverter.Name = "baseConverter";
+            this.baseConverter.Size = new System.Drawing.Size(148, 18);
+            this.baseConverter.TabIndex = 39;
+            this.baseConverter.Text = "Base Converter";
             // 
             // panel11
             // 
             this.panel11.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel11.Controls.Add(this.label9);
             this.panel11.Controls.Add(this.textBoxChecksum8);
-            this.panel11.Controls.Add(this.button1);
+            this.panel11.Controls.Add(this.cs8Fix);
             this.panel11.Controls.Add(this.label3);
-            this.panel11.Controls.Add(this.quickFix);
+            this.panel11.Controls.Add(this.cs32Fix);
             this.panel11.Controls.Add(this.panel13);
             this.panel11.Controls.Add(this.targetCS);
             this.panel11.Location = new System.Drawing.Point(-3, 51);
@@ -638,16 +644,16 @@
             this.textBoxChecksum8.TabIndex = 33;
             this.textBoxChecksum8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // button1
+            // cs8Fix
             // 
-            this.button1.Enabled = false;
-            this.button1.Location = new System.Drawing.Point(394, 70);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(152, 32);
-            this.button1.TabIndex = 34;
-            this.button1.Text = "8-bit Fix";
-            this.button1.UseVisualStyleBackColor = true;
+            this.cs8Fix.Enabled = false;
+            this.cs8Fix.Location = new System.Drawing.Point(394, 70);
+            this.cs8Fix.Margin = new System.Windows.Forms.Padding(2);
+            this.cs8Fix.Name = "cs8Fix";
+            this.cs8Fix.Size = new System.Drawing.Size(152, 32);
+            this.cs8Fix.TabIndex = 34;
+            this.cs8Fix.Text = "8-bit Fix";
+            this.cs8Fix.UseVisualStyleBackColor = true;
             // 
             // label3
             // 
@@ -661,16 +667,16 @@
             this.label3.TabIndex = 33;
             this.label3.Text = "* IN DECIMAL";
             // 
-            // quickFix
+            // cs32Fix
             // 
-            this.quickFix.Location = new System.Drawing.Point(398, 16);
-            this.quickFix.Margin = new System.Windows.Forms.Padding(2);
-            this.quickFix.Name = "quickFix";
-            this.quickFix.Size = new System.Drawing.Size(152, 32);
-            this.quickFix.TabIndex = 35;
-            this.quickFix.Text = "32-bit Fix";
-            this.quickFix.UseVisualStyleBackColor = true;
-            this.quickFix.Click += new System.EventHandler(this.QuickFix_Click);
+            this.cs32Fix.Location = new System.Drawing.Point(398, 16);
+            this.cs32Fix.Margin = new System.Windows.Forms.Padding(2);
+            this.cs32Fix.Name = "cs32Fix";
+            this.cs32Fix.Size = new System.Drawing.Size(152, 32);
+            this.cs32Fix.TabIndex = 35;
+            this.cs32Fix.Text = "32-bit Fix";
+            this.cs32Fix.UseVisualStyleBackColor = true;
+            this.cs32Fix.Click += new System.EventHandler(this.QuickFix_Click);
             // 
             // panel13
             // 
@@ -708,21 +714,23 @@
             this.targetCS.TabIndex = 30;
             this.targetCS.Text = "Target Checksum(32 bit):";
             // 
-            // fixCS
+            // checksumCorrection
             // 
-            this.fixCS.AutoSize = true;
-            this.fixCS.Location = new System.Drawing.Point(186, 18);
-            this.fixCS.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.fixCS.Name = "fixCS";
-            this.fixCS.Size = new System.Drawing.Size(198, 18);
-            this.fixCS.TabIndex = 38;
-            this.fixCS.Text = "Checksum Correction";
+            this.checksumCorrection.AutoSize = true;
+            this.checksumCorrection.Location = new System.Drawing.Point(186, 18);
+            this.checksumCorrection.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.checksumCorrection.Name = "checksumCorrection";
+            this.checksumCorrection.Size = new System.Drawing.Size(198, 18);
+            this.checksumCorrection.TabIndex = 38;
+            this.checksumCorrection.Text = "Checksum Correction";
             // 
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage3.Controls.Add(this.label4);
+            this.tabPage3.Controls.Add(this.attemptBlackScreenFix);
+            this.tabPage3.Controls.Add(this.advancedPowerLimitsControl);
             this.tabPage3.Controls.Add(this.panel15);
+            this.tabPage3.Controls.Add(this.panel6);
             this.tabPage3.Location = new System.Drawing.Point(4, 27);
             this.tabPage3.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage3.Name = "tabPage3";
@@ -731,16 +739,27 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Advanced";
             // 
-            // label4
+            // attemptBlackScreenFix
             // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label4.Location = new System.Drawing.Point(142, 18);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(298, 18);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Advanced Power Limits Control";
+            this.attemptBlackScreenFix.AutoSize = true;
+            this.attemptBlackScreenFix.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.attemptBlackScreenFix.Location = new System.Drawing.Point(166, 300);
+            this.attemptBlackScreenFix.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.attemptBlackScreenFix.Name = "attemptBlackScreenFix";
+            this.attemptBlackScreenFix.Size = new System.Drawing.Size(248, 18);
+            this.attemptBlackScreenFix.TabIndex = 38;
+            this.attemptBlackScreenFix.Text = "Attempt Black Screen Fix";
+            // 
+            // advancedPowerLimitsControl
+            // 
+            this.advancedPowerLimitsControl.AutoSize = true;
+            this.advancedPowerLimitsControl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.advancedPowerLimitsControl.Location = new System.Drawing.Point(142, 18);
+            this.advancedPowerLimitsControl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.advancedPowerLimitsControl.Name = "advancedPowerLimitsControl";
+            this.advancedPowerLimitsControl.Size = new System.Drawing.Size(298, 18);
+            this.advancedPowerLimitsControl.TabIndex = 0;
+            this.advancedPowerLimitsControl.Text = "Advanced Power Limits Control";
             // 
             // panel15
             // 
@@ -749,25 +768,25 @@
             this.panel15.Controls.Add(this.panel16);
             this.panel15.Controls.Add(this.panel19);
             this.panel15.Controls.Add(this.panel14);
-            this.panel15.Controls.Add(this.label8);
+            this.panel15.Controls.Add(this.maxPower3);
             this.panel15.Controls.Add(this.panel17);
-            this.panel15.Controls.Add(this.label7);
+            this.panel15.Controls.Add(this.defPower3);
             this.panel15.Controls.Add(this.panel12);
-            this.panel15.Controls.Add(this.label6);
-            this.panel15.Controls.Add(this.label2);
-            this.panel15.Controls.Add(this.label5);
-            this.panel15.Controls.Add(this.magicNum);
-            this.panel15.Location = new System.Drawing.Point(-3, 50);
+            this.panel15.Controls.Add(this.maxPower2);
+            this.panel15.Controls.Add(this.maxPower1);
+            this.panel15.Controls.Add(this.defPower2);
+            this.panel15.Controls.Add(this.defPower1);
+            this.panel15.Location = new System.Drawing.Point(-4, 48);
             this.panel15.Margin = new System.Windows.Forms.Padding(2);
             this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(578, 344);
+            this.panel15.Size = new System.Drawing.Size(575, 236);
             this.panel15.TabIndex = 37;
             // 
             // panel18
             // 
             this.panel18.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel18.Controls.Add(this.numericUpDownP3Max);
-            this.panel18.Location = new System.Drawing.Point(273, 266);
+            this.panel18.Location = new System.Drawing.Point(351, 197);
             this.panel18.Margin = new System.Windows.Forms.Padding(2);
             this.panel18.Name = "panel18";
             this.panel18.Size = new System.Drawing.Size(92, 24);
@@ -797,7 +816,7 @@
             // 
             this.panel16.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel16.Controls.Add(this.numericUpDownP2Max);
-            this.panel16.Location = new System.Drawing.Point(273, 170);
+            this.panel16.Location = new System.Drawing.Point(351, 117);
             this.panel16.Margin = new System.Windows.Forms.Padding(2);
             this.panel16.Name = "panel16";
             this.panel16.Size = new System.Drawing.Size(92, 24);
@@ -827,7 +846,7 @@
             // 
             this.panel19.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel19.Controls.Add(this.numericUpDownP3Base);
-            this.panel19.Location = new System.Drawing.Point(273, 230);
+            this.panel19.Location = new System.Drawing.Point(351, 166);
             this.panel19.Margin = new System.Windows.Forms.Padding(2);
             this.panel19.Name = "panel19";
             this.panel19.Size = new System.Drawing.Size(92, 24);
@@ -857,7 +876,7 @@
             // 
             this.panel14.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel14.Controls.Add(this.numericUpDownP1Max);
-            this.panel14.Location = new System.Drawing.Point(273, 68);
+            this.panel14.Location = new System.Drawing.Point(351, 41);
             this.panel14.Margin = new System.Windows.Forms.Padding(2);
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(92, 24);
@@ -883,21 +902,21 @@
             this.numericUpDownP1Max.Size = new System.Drawing.Size(92, 26);
             this.numericUpDownP1Max.TabIndex = 31;
             // 
-            // label8
+            // maxPower3
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(52, 266);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(148, 18);
-            this.label8.TabIndex = 44;
-            this.label8.Text = "Max Value(mW):";
+            this.maxPower3.AutoSize = true;
+            this.maxPower3.Location = new System.Drawing.Point(130, 197);
+            this.maxPower3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.maxPower3.Name = "maxPower3";
+            this.maxPower3.Size = new System.Drawing.Size(148, 18);
+            this.maxPower3.TabIndex = 44;
+            this.maxPower3.Text = "Max Value(mW):";
             // 
             // panel17
             // 
             this.panel17.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel17.Controls.Add(this.numericUpDownP2Base);
-            this.panel17.Location = new System.Drawing.Point(273, 132);
+            this.panel17.Location = new System.Drawing.Point(351, 87);
             this.panel17.Margin = new System.Windows.Forms.Padding(2);
             this.panel17.Name = "panel17";
             this.panel17.Size = new System.Drawing.Size(92, 24);
@@ -923,21 +942,21 @@
             this.numericUpDownP2Base.Size = new System.Drawing.Size(92, 26);
             this.numericUpDownP2Base.TabIndex = 31;
             // 
-            // label7
+            // defPower3
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(52, 230);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(148, 18);
-            this.label7.TabIndex = 42;
-            this.label7.Text = "Def Value(mW):";
+            this.defPower3.AutoSize = true;
+            this.defPower3.Location = new System.Drawing.Point(130, 166);
+            this.defPower3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.defPower3.Name = "defPower3";
+            this.defPower3.Size = new System.Drawing.Size(148, 18);
+            this.defPower3.TabIndex = 42;
+            this.defPower3.Text = "Def Value(mW):";
             // 
             // panel12
             // 
             this.panel12.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel12.Controls.Add(this.numericUpDownP1Base);
-            this.panel12.Location = new System.Drawing.Point(273, 30);
+            this.panel12.Location = new System.Drawing.Point(351, 12);
             this.panel12.Margin = new System.Windows.Forms.Padding(2);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(92, 24);
@@ -963,50 +982,93 @@
             this.numericUpDownP1Base.Size = new System.Drawing.Size(92, 26);
             this.numericUpDownP1Base.TabIndex = 31;
             // 
-            // label6
+            // maxPower2
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(52, 170);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(148, 18);
-            this.label6.TabIndex = 40;
-            this.label6.Text = "Max Value(mW):";
+            this.maxPower2.AutoSize = true;
+            this.maxPower2.Location = new System.Drawing.Point(130, 117);
+            this.maxPower2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.maxPower2.Name = "maxPower2";
+            this.maxPower2.Size = new System.Drawing.Size(148, 18);
+            this.maxPower2.TabIndex = 40;
+            this.maxPower2.Text = "Max Value(mW):";
             // 
-            // label2
+            // maxPower1
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(52, 68);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(148, 18);
-            this.label2.TabIndex = 36;
-            this.label2.Text = "Max Value(mW):";
+            this.maxPower1.AutoSize = true;
+            this.maxPower1.Location = new System.Drawing.Point(130, 41);
+            this.maxPower1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.maxPower1.Name = "maxPower1";
+            this.maxPower1.Size = new System.Drawing.Size(148, 18);
+            this.maxPower1.TabIndex = 36;
+            this.maxPower1.Text = "Max Value(mW):";
             // 
-            // label5
+            // defPower2
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(52, 132);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(148, 18);
-            this.label5.TabIndex = 38;
-            this.label5.Text = "Def Value(mW):";
+            this.defPower2.AutoSize = true;
+            this.defPower2.Location = new System.Drawing.Point(130, 87);
+            this.defPower2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.defPower2.Name = "defPower2";
+            this.defPower2.Size = new System.Drawing.Size(148, 18);
+            this.defPower2.TabIndex = 38;
+            this.defPower2.Text = "Def Value(mW):";
             // 
-            // magicNum
+            // defPower1
             // 
-            this.magicNum.AutoSize = true;
-            this.magicNum.Location = new System.Drawing.Point(52, 30);
-            this.magicNum.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.magicNum.Name = "magicNum";
-            this.magicNum.Size = new System.Drawing.Size(148, 18);
-            this.magicNum.TabIndex = 34;
-            this.magicNum.Text = "Def Value(mW):";
+            this.defPower1.AutoSize = true;
+            this.defPower1.Location = new System.Drawing.Point(130, 12);
+            this.defPower1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.defPower1.Name = "defPower1";
+            this.defPower1.Size = new System.Drawing.Size(148, 18);
+            this.defPower1.TabIndex = 34;
+            this.defPower1.Text = "Def Value(mW):";
+            // 
+            // panel6
+            // 
+            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel6.Controls.Add(this.headerRemove);
+            this.panel6.Controls.Add(this.headerSection);
+            this.panel6.Controls.Add(this.headerPreserve);
+            this.panel6.Location = new System.Drawing.Point(-4, 335);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(580, 52);
+            this.panel6.TabIndex = 42;
+            // 
+            // headerRemove
+            // 
+            this.headerRemove.AutoSize = true;
+            this.headerRemove.Location = new System.Drawing.Point(418, 13);
+            this.headerRemove.Margin = new System.Windows.Forms.Padding(2);
+            this.headerRemove.Name = "headerRemove";
+            this.headerRemove.Size = new System.Drawing.Size(93, 22);
+            this.headerRemove.TabIndex = 41;
+            this.headerRemove.Text = "Remove";
+            this.headerRemove.UseVisualStyleBackColor = true;
+            // 
+            // headerSection
+            // 
+            this.headerSection.AutoSize = true;
+            this.headerSection.Location = new System.Drawing.Point(120, 15);
+            this.headerSection.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.headerSection.Name = "headerSection";
+            this.headerSection.Size = new System.Drawing.Size(158, 18);
+            this.headerSection.TabIndex = 39;
+            this.headerSection.Text = "Header Section:";
+            // 
+            // headerPreserve
+            // 
+            this.headerPreserve.AutoSize = true;
+            this.headerPreserve.Location = new System.Drawing.Point(294, 13);
+            this.headerPreserve.Margin = new System.Windows.Forms.Padding(2);
+            this.headerPreserve.Name = "headerPreserve";
+            this.headerPreserve.Size = new System.Drawing.Size(113, 22);
+            this.headerPreserve.TabIndex = 40;
+            this.headerPreserve.Text = "Preserve";
+            this.headerPreserve.UseVisualStyleBackColor = true;
             // 
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage1.Controls.Add(this.label1);
+            this.tabPage1.Controls.Add(this.basicPowerLimitsControl);
             this.tabPage1.Controls.Add(this.panel2);
             this.tabPage1.Location = new System.Drawing.Point(4, 27);
             this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
@@ -1016,15 +1078,15 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Basic";
             // 
-            // label1
+            // basicPowerLimitsControl
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(160, 20);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(268, 18);
-            this.label1.TabIndex = 35;
-            this.label1.Text = "Basic Power Limits Control";
+            this.basicPowerLimitsControl.AutoSize = true;
+            this.basicPowerLimitsControl.Location = new System.Drawing.Point(160, 20);
+            this.basicPowerLimitsControl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.basicPowerLimitsControl.Name = "basicPowerLimitsControl";
+            this.basicPowerLimitsControl.Size = new System.Drawing.Size(268, 18);
+            this.basicPowerLimitsControl.TabIndex = 35;
+            this.basicPowerLimitsControl.Text = "Basic Power Limits Control";
             // 
             // panel2
             // 
@@ -1039,22 +1101,22 @@
             // 
             // panel9
             // 
-            this.panel9.Controls.Add(this.label19);
+            this.panel9.Controls.Add(this.thermalLimitsControl);
             this.panel9.Controls.Add(this.tempFixed);
             this.panel9.Controls.Add(this.tempAdjustable);
             this.panel9.Controls.Add(this.tempSlide);
             this.panel9.Controls.Add(this.panel27);
-            this.panel9.Controls.Add(this.label18);
+            this.panel9.Controls.Add(this.maxTemp2);
             this.panel9.Controls.Add(this.panel26);
-            this.panel9.Controls.Add(this.label17);
-            this.panel9.Controls.Add(this.label16);
+            this.panel9.Controls.Add(this.defTemp2);
+            this.panel9.Controls.Add(this.minTemp2);
             this.panel9.Controls.Add(this.panel25);
             this.panel9.Controls.Add(this.panel24);
-            this.panel9.Controls.Add(this.minVal);
-            this.panel9.Controls.Add(this.defVal);
+            this.panel9.Controls.Add(this.minTemp1);
+            this.panel9.Controls.Add(this.defTemp1);
             this.panel9.Controls.Add(this.panel7);
             this.panel9.Controls.Add(this.panel5);
-            this.panel9.Controls.Add(this.maxVal);
+            this.panel9.Controls.Add(this.maxTemp1);
             this.panel9.Controls.Add(this.panel10);
             this.panel9.Location = new System.Drawing.Point(2, -2);
             this.panel9.Margin = new System.Windows.Forms.Padding(2);
@@ -1062,15 +1124,15 @@
             this.panel9.Size = new System.Drawing.Size(574, 345);
             this.panel9.TabIndex = 29;
             // 
-            // label19
+            // thermalLimitsControl
             // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(88, 140);
-            this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(378, 18);
-            this.label19.TabIndex = 36;
-            this.label19.Text = "Thermal Limits Control (Experimental)";
+            this.thermalLimitsControl.AutoSize = true;
+            this.thermalLimitsControl.Location = new System.Drawing.Point(88, 140);
+            this.thermalLimitsControl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.thermalLimitsControl.Name = "thermalLimitsControl";
+            this.thermalLimitsControl.Size = new System.Drawing.Size(378, 18);
+            this.thermalLimitsControl.TabIndex = 36;
+            this.thermalLimitsControl.Text = "Thermal Limits Control (Experimental)";
             // 
             // tempFixed
             // 
@@ -1129,15 +1191,15 @@
             this.numericUpDownTemp2Max.Size = new System.Drawing.Size(92, 26);
             this.numericUpDownTemp2Max.TabIndex = 32;
             // 
-            // label18
+            // maxTemp2
             // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(278, 261);
-            this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(138, 18);
-            this.label18.TabIndex = 57;
-            this.label18.Text = "Max Value(C):";
+            this.maxTemp2.AutoSize = true;
+            this.maxTemp2.Location = new System.Drawing.Point(278, 261);
+            this.maxTemp2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.maxTemp2.Name = "maxTemp2";
+            this.maxTemp2.Size = new System.Drawing.Size(138, 18);
+            this.maxTemp2.TabIndex = 57;
+            this.maxTemp2.Text = "Max Value(C):";
             // 
             // panel26
             // 
@@ -1164,25 +1226,25 @@
             this.numericUpDownTemp2Base.Size = new System.Drawing.Size(92, 26);
             this.numericUpDownTemp2Base.TabIndex = 33;
             // 
-            // label17
+            // defTemp2
             // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(278, 216);
-            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(138, 18);
-            this.label17.TabIndex = 55;
-            this.label17.Text = "Def Value(C):";
+            this.defTemp2.AutoSize = true;
+            this.defTemp2.Location = new System.Drawing.Point(278, 216);
+            this.defTemp2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.defTemp2.Name = "defTemp2";
+            this.defTemp2.Size = new System.Drawing.Size(138, 18);
+            this.defTemp2.TabIndex = 55;
+            this.defTemp2.Text = "Def Value(C):";
             // 
-            // label16
+            // minTemp2
             // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(278, 172);
-            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(138, 18);
-            this.label16.TabIndex = 52;
-            this.label16.Text = "Min Value(C):";
+            this.minTemp2.AutoSize = true;
+            this.minTemp2.Location = new System.Drawing.Point(278, 172);
+            this.minTemp2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.minTemp2.Name = "minTemp2";
+            this.minTemp2.Size = new System.Drawing.Size(138, 18);
+            this.minTemp2.TabIndex = 52;
+            this.minTemp2.Text = "Min Value(C):";
             // 
             // panel25
             // 
@@ -1234,25 +1296,25 @@
             this.numericUpDownTemp1Max.Size = new System.Drawing.Size(92, 26);
             this.numericUpDownTemp1Max.TabIndex = 32;
             // 
-            // minVal
+            // minTemp1
             // 
-            this.minVal.AutoSize = true;
-            this.minVal.Location = new System.Drawing.Point(20, 172);
-            this.minVal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.minVal.Name = "minVal";
-            this.minVal.Size = new System.Drawing.Size(138, 18);
-            this.minVal.TabIndex = 46;
-            this.minVal.Text = "Min Value(C):";
+            this.minTemp1.AutoSize = true;
+            this.minTemp1.Location = new System.Drawing.Point(20, 172);
+            this.minTemp1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.minTemp1.Name = "minTemp1";
+            this.minTemp1.Size = new System.Drawing.Size(138, 18);
+            this.minTemp1.TabIndex = 46;
+            this.minTemp1.Text = "Min Value(C):";
             // 
-            // defVal
+            // defTemp1
             // 
-            this.defVal.AutoSize = true;
-            this.defVal.Location = new System.Drawing.Point(20, 214);
-            this.defVal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.defVal.Name = "defVal";
-            this.defVal.Size = new System.Drawing.Size(138, 18);
-            this.defVal.TabIndex = 47;
-            this.defVal.Text = "Def Value(C):";
+            this.defTemp1.AutoSize = true;
+            this.defTemp1.Location = new System.Drawing.Point(20, 214);
+            this.defTemp1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.defTemp1.Name = "defTemp1";
+            this.defTemp1.Size = new System.Drawing.Size(138, 18);
+            this.defTemp1.TabIndex = 47;
+            this.defTemp1.Text = "Def Value(C):";
             // 
             // panel7
             // 
@@ -1304,15 +1366,15 @@
             this.numericUpDownTemp1Base.Size = new System.Drawing.Size(92, 26);
             this.numericUpDownTemp1Base.TabIndex = 31;
             // 
-            // maxVal
+            // maxTemp1
             // 
-            this.maxVal.AutoSize = true;
-            this.maxVal.Location = new System.Drawing.Point(20, 260);
-            this.maxVal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.maxVal.Name = "maxVal";
-            this.maxVal.Size = new System.Drawing.Size(138, 18);
-            this.maxVal.TabIndex = 48;
-            this.maxVal.Text = "Max Value(C):";
+            this.maxTemp1.AutoSize = true;
+            this.maxTemp1.Location = new System.Drawing.Point(20, 260);
+            this.maxTemp1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.maxTemp1.Name = "maxTemp1";
+            this.maxTemp1.Size = new System.Drawing.Size(138, 18);
+            this.maxTemp1.TabIndex = 48;
+            this.maxTemp1.Text = "Max Value(C):";
             // 
             // panel10
             // 
@@ -1486,7 +1548,7 @@
             this.Name = "MainForm";
             this.Padding = new System.Windows.Forms.Padding(8);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Mobile Pascal TDP Tweaker v1.20";
+            this.Text = "Mobile Pascal TDP Tweaker v1.21";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel8.ResumeLayout(false);
@@ -1519,6 +1581,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownP2Base)).EndInit();
             this.panel12.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownP1Base)).EndInit();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -1570,32 +1634,32 @@
         private System.Windows.Forms.Label model;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox textBoxModifiedDate;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox textBoxStarter;
+        private System.Windows.Forms.TextBox textBoxDeviceID;
         private System.Windows.Forms.TabPage tabPage5;
         private System.Windows.Forms.Panel panel20;
         private System.Windows.Forms.TextBox textBoxLittleEndian;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label littleEndian;
+        private System.Windows.Forms.Label bigEndian;
         private System.Windows.Forms.TextBox textBoxBigEndian;
         private System.Windows.Forms.Panel panel22;
         private System.Windows.Forms.TextBox textBoxDecValue;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label decValue;
         private System.Windows.Forms.Panel panelHexValue;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox textBoxHexValue;
+        private System.Windows.Forms.Label hexValue;
+        private System.Windows.Forms.Label baseConverter;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.TextBox textBoxChecksum8;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button cs8Fix;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button quickFix;
+        private System.Windows.Forms.Button cs32Fix;
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.NumericUpDown numericUpDownTargetChecksum32;
         private System.Windows.Forms.Label targetCS;
-        private System.Windows.Forms.Label fixCS;
+        private System.Windows.Forms.Label checksumCorrection;
         private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label advancedPowerLimitsControl;
         private System.Windows.Forms.Panel panel15;
         private System.Windows.Forms.Panel panel18;
         private System.Windows.Forms.NumericUpDown numericUpDownP3Max;
@@ -1605,19 +1669,19 @@
         private System.Windows.Forms.NumericUpDown numericUpDownP3Base;
         private System.Windows.Forms.Panel panel14;
         private System.Windows.Forms.NumericUpDown numericUpDownP1Max;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label maxPower3;
         private System.Windows.Forms.Panel panel17;
         private System.Windows.Forms.NumericUpDown numericUpDownP2Base;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label defPower3;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.NumericUpDown numericUpDownP1Base;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label magicNum;
+        private System.Windows.Forms.Label maxPower2;
+        private System.Windows.Forms.Label maxPower1;
+        private System.Windows.Forms.Label defPower2;
+        private System.Windows.Forms.Label defPower1;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label thermalLimitsControl;
+        private System.Windows.Forms.Label basicPowerLimitsControl;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.NumericUpDown numericUpDownTemp2Max;
@@ -1625,22 +1689,22 @@
         private System.Windows.Forms.RadioButton tempAdjustable;
         private System.Windows.Forms.Label tempSlide;
         private System.Windows.Forms.Panel panel27;
-        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label maxTemp2;
         private System.Windows.Forms.Panel panel26;
         private System.Windows.Forms.NumericUpDown numericUpDownTemp2Base;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label defTemp2;
+        private System.Windows.Forms.Label minTemp2;
         private System.Windows.Forms.Panel panel25;
         private System.Windows.Forms.NumericUpDown numericUpDownTemp2Min;
         private System.Windows.Forms.Panel panel24;
         private System.Windows.Forms.NumericUpDown numericUpDownTemp1Max;
-        private System.Windows.Forms.Label minVal;
-        private System.Windows.Forms.Label defVal;
+        private System.Windows.Forms.Label minTemp1;
+        private System.Windows.Forms.Label defTemp1;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.NumericUpDown numericUpDownTemp1Min;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.NumericUpDown numericUpDownTemp1Base;
-        private System.Windows.Forms.Label maxVal;
+        private System.Windows.Forms.Label maxTemp1;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.RadioButton tdpFixed;
         private System.Windows.Forms.RadioButton tdpAdjustable;
@@ -1654,6 +1718,11 @@
         private System.Windows.Forms.TabControl Adjustment;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label attemptBlackScreenFix;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.RadioButton headerRemove;
+        private System.Windows.Forms.Label headerSection;
+        private System.Windows.Forms.RadioButton headerPreserve;
     }
 }
 

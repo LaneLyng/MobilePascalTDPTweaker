@@ -93,13 +93,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\Bios\Address.cs" />
-    <Compile Include="Models\Bios\Preset.cs" />
+    <Compile Include="Models\Firmware\Bios.cs" />
+    <Compile Include="Models\Reader\Address.cs" />
+    <Compile Include="Models\Reader\Preset.cs" />
+    <Compile Include="Models\Controllers\BiosController.cs" />
+    <Compile Include="Models\Controllers\NumericController.cs" />
+    <Compile Include="Models\Controllers\OptionController.cs" />
+    <Compile Include="Models\Controllers\TextController.cs" />
     <Compile Include="Models\Helper.cs" />
-    <Compile Include="Models\Form\IndexCollector.cs" />
-    <Compile Include="Models\Bios\Model.cs" />
-    <Compile Include="Models\Bios\Reader.cs" />
-    <Compile Include="Models\Bios\Config.cs" />
+    <Compile Include="Models\Firmware\IndexCollector.cs" />
+    <Compile Include="Models\Reader\Model.cs" />
+    <Compile Include="Models\Reader\Processor.cs" />
+    <Compile Include="Models\Reader\Config.cs" />
     <Compile Include="App\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
