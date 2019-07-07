@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PascalTDPTweaker.Models.Controllers
+namespace PascalTDPTweaker.Controllers
 {
     public static class TextController
     {

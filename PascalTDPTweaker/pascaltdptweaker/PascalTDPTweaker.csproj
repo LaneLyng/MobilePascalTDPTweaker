@@ -96,10 +96,10 @@
     <Compile Include="Models\Firmware\Bios.cs" />
     <Compile Include="Models\Reader\Address.cs" />
     <Compile Include="Models\Reader\Preset.cs" />
-    <Compile Include="Models\Controllers\BiosController.cs" />
-    <Compile Include="Models\Controllers\NumericController.cs" />
-    <Compile Include="Models\Controllers\OptionController.cs" />
-    <Compile Include="Models\Controllers\TextController.cs" />
+    <Compile Include="Controllers\BiosController.cs" />
+    <Compile Include="Controllers\NumericController.cs" />
+    <Compile Include="Controllers\OptionController.cs" />
+    <Compile Include="Controllers\TextController.cs" />
     <Compile Include="Models\Helper.cs" />
     <Compile Include="Models\Firmware\IndexCollector.cs" />
     <Compile Include="Models\Reader\Model.cs" />

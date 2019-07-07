@@ -1,7 +1,7 @@
 ﻿using System.Drawing;
 using System.Windows.Forms;
 
-namespace PascalTDPTweaker.Models.Controllers
+namespace PascalTDPTweaker.Controllers
 {
     public static class BiosController
     {
@@ -9,7 +9,7 @@ namespace PascalTDPTweaker.Models.Controllers
         private static readonly int SAFE_LENGTH = 70; 
 
         // Modify vBIOS values in place.
-        public static void ModBIOSValue(Firmware.Bios bios, int index, int decValue, int type)
+        public static void ModBIOSValue(Models.Firmware.Bios bios, int index, int decValue, int type)
         {
             if (index != -1)
             {
@@ -56,7 +56,7 @@ namespace PascalTDPTweaker.Models.Controllers
         }
 
         // Modify vBIOS slider in place.
-        public static void ModBIOSSlide(Firmware.Bios bios, int index, bool adj, bool fix, string signal)
+        public static void ModBIOSSlide(Models.Firmware.Bios bios, int index, bool adj, bool fix, string signal)
         {
             if (adj == true && fix == false)
             {
@@ -81,7 +81,7 @@ namespace PascalTDPTweaker.Models.Controllers
         }
 
         // Correct checksum based on offset.
-        public static int CorrectCS(Firmware.Bios bios, long checksumValue, long offset, TextBox tb, NumericUpDown nud, int mode)
+        public static int CorrectCS(Models.Firmware.Bios bios, long checksumValue, long offset, TextBox tb, NumericUpDown nud, int mode)
         {
             long fixCS = (long)nud.Value;
             int range = bios.IndexCollection.CheckSum32Index + SAFE_LENGTH;

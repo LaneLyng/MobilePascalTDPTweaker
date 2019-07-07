@@ -44,7 +44,7 @@ namespace PascalTDPTweaker
                 bios = new Models.Firmware.Bios(File.ReadAllBytes(open.FileName));
                 open.Dispose();
 
-                checksumValue = Models.Controllers.BiosController.CalculateChecksum(bios.ByteArray, textBoxChecksum32, numericUpDownTargetChecksum32);
+                checksumValue = Controllers.BiosController.CalculateChecksum(bios.ByteArray, textBoxChecksum32, numericUpDownTargetChecksum32);
                 globalCounter = 0;
 
                 // Sequentially read bytes; compare bytes read with addresses in 'Models.config'.
@@ -147,7 +147,7 @@ namespace PascalTDPTweaker
         {
             if (index == -1)
             {
-                index = Models.Controllers.TextController.SetText(address, vbios, pos, dataLen, shift, tb, type);
+                index = Controllers.TextController.SetText(address, vbios, pos, dataLen, shift, tb, type);
 
                 if (index != -1)
                 {
@@ -164,7 +164,7 @@ namespace PascalTDPTweaker
         {
             if (index == -1)
             {
-                index = Models.Controllers.NumericController.SetValue(address, vbios, pos, dataLen, shift, nud, type);
+                index = Controllers.NumericController.SetValue(address, vbios, pos, dataLen, shift, nud, type);
                 if (index != -1)
                 {
                     globalCounter++;
@@ -184,7 +184,7 @@ namespace PascalTDPTweaker
         {
             if (index == -1)
             {
-                index = Models.Controllers.OptionController.SetRadio(address, vbios, pos, dataLen, shift, rb1, rb2, signal);
+                index = Controllers.OptionController.SetRadio(address, vbios, pos, dataLen, shift, rb1, rb2, signal);
                 if (index != -1)
                 {
                     globalCounter++;
@@ -210,34 +210,34 @@ namespace PascalTDPTweaker
             else if (save.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
 
-                Models.Controllers.BiosController.ModBIOSValue(bios, bios.IndexCollection.BaseTdpIndex, (int)numericUpDownTdpBase.Value, 1);
-                Models.Controllers.BiosController.ModBIOSValue(bios, bios.IndexCollection.MaxTdpIndex, (int)numericUpDownTdpMax.Value, 1);
+                Controllers.BiosController.ModBIOSValue(bios, bios.IndexCollection.BaseTdpIndex, (int)numericUpDownTdpBase.Value, 1);
+                Controllers.BiosController.ModBIOSValue(bios, bios.IndexCollection.MaxTdpIndex, (int)numericUpDownTdpMax.Value, 1);
 
-                Models.Controllers.BiosController.ModBIOSValue(bios, bios.IndexCollection.P1BaseTdpIndex, (int)numericUpDownP1Base.Value, 1);
-                Models.Controllers.BiosController.ModBIOSValue(bios, bios.IndexCollection.P1MaxTdpIndex, (int)numericUpDownP1Max.Value, 1);
+                Controllers.BiosController.ModBIOSValue(bios, bios.IndexCollection.P1BaseTdpIndex, (int)numericUpDownP1Base.Value, 1);
+                Controllers.BiosController.ModBIOSValue(bios, bios.IndexCollection.P1MaxTdpIndex, (int)numericUpDownP1Max.Value, 1);
 
-                Models.Controllers.BiosController.ModBIOSValue(bios, bios.IndexCollection.P2BaseTdpIndex, (int)numericUpDownP2Base.Value, 1);
-                Models.Controllers.BiosController.ModBIOSValue(bios, bios.IndexCollection.P2MaxTdpIndex, (int)numericUpDownP2Max.Value, 1);
+                Controllers.BiosController.ModBIOSValue(bios, bios.IndexCollection.P2BaseTdpIndex, (int)numericUpDownP2Base.Value, 1);
+                Controllers.BiosController.ModBIOSValue(bios, bios.IndexCollection.P2MaxTdpIndex, (int)numericUpDownP2Max.Value, 1);
 
-                Models.Controllers.BiosController.ModBIOSValue(bios, bios.IndexCollection.P3BaseTdpIndex, (int)numericUpDownP3Base.Value, 1);
-                Models.Controllers.BiosController.ModBIOSValue(bios, bios.IndexCollection.P3MaxTdpIndex, (int)numericUpDownP3Max.Value, 1);
+                Controllers.BiosController.ModBIOSValue(bios, bios.IndexCollection.P3BaseTdpIndex, (int)numericUpDownP3Base.Value, 1);
+                Controllers.BiosController.ModBIOSValue(bios, bios.IndexCollection.P3MaxTdpIndex, (int)numericUpDownP3Max.Value, 1);
 
-                Models.Controllers.BiosController.ModBIOSValue(bios, bios.IndexCollection.T1BaseTempIndex, (int)numericUpDownTemp1Base.Value, 2);
-                Models.Controllers.BiosController.ModBIOSValue(bios, bios.IndexCollection.T1MaxTempIndex, (int)numericUpDownTemp1Max.Value, 2);
-                Models.Controllers.BiosController.ModBIOSValue(bios, bios.IndexCollection.T1MinTempIndex, (int)numericUpDownTemp1Min.Value, 2);
+                Controllers.BiosController.ModBIOSValue(bios, bios.IndexCollection.T1BaseTempIndex, (int)numericUpDownTemp1Base.Value, 2);
+                Controllers.BiosController.ModBIOSValue(bios, bios.IndexCollection.T1MaxTempIndex, (int)numericUpDownTemp1Max.Value, 2);
+                Controllers.BiosController.ModBIOSValue(bios, bios.IndexCollection.T1MinTempIndex, (int)numericUpDownTemp1Min.Value, 2);
 
-                Models.Controllers.BiosController.ModBIOSValue(bios, bios.IndexCollection.T2BaseTempIndex, (int)numericUpDownTemp2Base.Value, 2);
-                Models.Controllers.BiosController.ModBIOSValue(bios, bios.IndexCollection.T2MaxTempIndex, (int)numericUpDownTemp2Max.Value, 2);
-                Models.Controllers.BiosController.ModBIOSValue(bios, bios.IndexCollection.T2MinTempIndex, (int)numericUpDownTemp2Min.Value, 2);
+                Controllers.BiosController.ModBIOSValue(bios, bios.IndexCollection.T2BaseTempIndex, (int)numericUpDownTemp2Base.Value, 2);
+                Controllers.BiosController.ModBIOSValue(bios, bios.IndexCollection.T2MaxTempIndex, (int)numericUpDownTemp2Max.Value, 2);
+                Controllers.BiosController.ModBIOSValue(bios, bios.IndexCollection.T2MinTempIndex, (int)numericUpDownTemp2Min.Value, 2);
 
-                Models.Controllers.BiosController.ModBIOSSlide(bios, bios.IndexCollection.TdpSliderIndex, tdpAdjustable.Checked, tdpFixed.Checked, processor.TdpSliderSignal.Config);
-                Models.Controllers.BiosController.ModBIOSSlide(bios, bios.IndexCollection.TempSliderIndex, tempAdjustable.Checked, tempFixed.Checked, processor.TempSliderSignal.Config);
+                Controllers.BiosController.ModBIOSSlide(bios, bios.IndexCollection.TdpSliderIndex, tdpAdjustable.Checked, tdpFixed.Checked, processor.TdpSliderSignal.Config);
+                Controllers.BiosController.ModBIOSSlide(bios, bios.IndexCollection.TempSliderIndex, tempAdjustable.Checked, tempFixed.Checked, processor.TempSliderSignal.Config);
 
-                long newCS = Models.Controllers.BiosController.CalculateChecksum(bios.ByteArray, textBoxChecksum32, numericUpDownTargetChecksum32);
+                long newCS = Controllers.BiosController.CalculateChecksum(bios.ByteArray, textBoxChecksum32, numericUpDownTargetChecksum32);
                 long offset = newCS - checksumValue;
 
                 //Console.WriteLine(offset);
-                if (Models.Controllers.BiosController.CorrectCS(bios, checksumValue, offset, textBoxChecksum32, numericUpDownTargetChecksum32, 1) == 1)
+                if (Controllers.BiosController.CorrectCS(bios, checksumValue, offset, textBoxChecksum32, numericUpDownTargetChecksum32, 1) == 1)
                 {
                     // Fix non G-SYNC vBIOS that has header.
                     if (headerRemove.Checked)
@@ -287,7 +287,7 @@ namespace PascalTDPTweaker
                 Console.WriteLine(offset);
                 if (offset == 0)
                     MessageBox.Show("Checksum offset is 0. No checksum correction needed.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                else if (Models.Controllers.BiosController.CorrectCS(bios, checksumValue, offset, textBoxChecksum32, numericUpDownTargetChecksum32, 2) == 1)
+                else if (Controllers.BiosController.CorrectCS(bios, checksumValue, offset, textBoxChecksum32, numericUpDownTargetChecksum32, 2) == 1)
                 {
                     MessageBox.Show("Offset " + offset + ". Checksum has been corrected.", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     checksumValue = fixCS;
